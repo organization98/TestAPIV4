@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Organization98. All rights reserved.
 //
 
-#import "MyTicketsViewController.h"
+#import "MyTicketsController.h"
 
-@interface MyTicketsViewController ()
+@interface MyTicketsController ()
 
 @end
 
-@implementation MyTicketsViewController
+@implementation MyTicketsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  MoreViewController.h
+//  SecondViewController.h
 //  TestAPIv4
 //
 //  Created by Dmitriy Demchenko on 04/18/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreViewController : UIViewController
+@interface MyTicketsController : UIViewController
+
 
 @end
+

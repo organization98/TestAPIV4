@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Organization98. All rights reserved.
 //
 
-#import "MoreViewController.h"
+#import "MoreController.h"
 
-@interface MoreViewController ()
+@interface MoreController ()
 
 @end
 
-@implementation MoreViewController
+@implementation MoreController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
