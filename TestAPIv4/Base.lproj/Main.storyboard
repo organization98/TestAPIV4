@@ -19,29 +19,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r97-1d-rtS">
                                 <rect key="frame" x="20" y="234" width="280" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSB-Nj-JKx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSB-Nj-JKx">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="iMb-hF-IIt"/>
                                         </constraints>
-                                        <inset key="titleEdgeInsets" minX="46" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Откуда" backgroundImage="carFrom">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="from">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="ncM-nA-sFn" kind="push" identifier="showFromStation" id="uNK-Vj-MSf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-Q0-wl4">
-                                        <rect key="frame" x="0.0" y="51" width="280" height="49"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="JRF-PM-aBz"/>
-                                        </constraints>
-                                        <state key="normal" title="Куда">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="ncM-nA-sFn" kind="push" identifier="showToStation" id="2p5-yi-zZm"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="np7-Ue-5YU">
@@ -51,6 +38,28 @@
                                             <constraint firstAttribute="height" constant="2" id="HgD-if-zhT"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-Q0-wl4">
+                                        <rect key="frame" x="0.0" y="51" width="280" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="JRF-PM-aBz"/>
+                                        </constraints>
+                                        <state key="normal" title="to">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ncM-nA-sFn" kind="push" identifier="showToStation" id="2p5-yi-zZm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-yb-k1z">
+                                        <rect key="frame" x="218" y="27" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="0dr-4w-hiC"/>
+                                            <constraint firstAttribute="width" constant="46" id="jJc-b8-YFo"/>
+                                        </constraints>
+                                        <state key="normal" image="changeArrows">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -63,12 +72,16 @@
                                     <constraint firstAttribute="trailing" secondItem="3ab-Q0-wl4" secondAttribute="trailing" id="UPk-IJ-qOJ"/>
                                     <constraint firstAttribute="height" constant="100" id="WPv-4a-7UB"/>
                                     <constraint firstAttribute="bottom" secondItem="3ab-Q0-wl4" secondAttribute="bottom" id="jEE-xr-8GF"/>
+                                    <constraint firstItem="CrG-yb-k1z" firstAttribute="top" secondItem="r97-1d-rtS" secondAttribute="top" constant="27" id="k5z-le-wuZ"/>
                                     <constraint firstItem="np7-Ue-5YU" firstAttribute="leading" secondItem="r97-1d-rtS" secondAttribute="leading" id="kLA-rr-KC5"/>
                                     <constraint firstItem="FSB-Nj-JKx" firstAttribute="leading" secondItem="r97-1d-rtS" secondAttribute="leading" id="pwi-4x-Pcb"/>
                                     <constraint firstItem="FSB-Nj-JKx" firstAttribute="top" secondItem="r97-1d-rtS" secondAttribute="top" id="re7-Hz-85e"/>
+                                    <constraint firstAttribute="centerY" secondItem="CrG-yb-k1z" secondAttribute="centerY" id="rsA-IQ-pAq"/>
+                                    <constraint firstAttribute="trailing" secondItem="CrG-yb-k1z" secondAttribute="trailing" constant="16" id="rtc-mr-yT0"/>
+                                    <constraint firstAttribute="bottom" secondItem="CrG-yb-k1z" secondAttribute="bottom" constant="27" id="y25-QQ-dOz"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoZ-0f-mYQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoZ-0f-mYQ">
                                 <rect key="frame" x="20" y="422" width="280" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="OO5-gs-gKV"/>
@@ -77,40 +90,40 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCb-Kf-t7B">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrU-An-xvL">
                                 <rect key="frame" x="20" y="354" width="280" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="8M6-aj-YXy"/>
+                                    <constraint firstAttribute="height" constant="48" id="DeO-p0-wfa"/>
                                 </constraints>
-                                <inset key="titleEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Дата отправления" image="calendar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="date">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3UD-DV-UAv" kind="push" identifier="showDateDeparture" id="Tyf-m6-Xcc"/>
+                                    <segue destination="3UD-DV-UAv" kind="push" identifier="showDateDeparture" id="RoO-P3-Oe4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CCb-Kf-t7B" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="20" id="DxY-Jd-eXi"/>
                             <constraint firstAttribute="trailing" secondItem="r97-1d-rtS" secondAttribute="trailing" constant="20" id="I5c-if-gzp"/>
                             <constraint firstItem="CoZ-0f-mYQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="20" id="IgO-Z1-5dr"/>
+                            <constraint firstAttribute="centerY" secondItem="r97-1d-rtS" secondAttribute="centerY" id="Laz-VF-a0g"/>
+                            <constraint firstItem="CoZ-0f-mYQ" firstAttribute="top" secondItem="OrU-An-xvL" secondAttribute="bottom" constant="20" id="N9H-HP-bjD"/>
                             <constraint firstAttribute="centerX" secondItem="r97-1d-rtS" secondAttribute="centerX" id="N9t-1A-XuE"/>
                             <constraint firstAttribute="trailing" secondItem="CoZ-0f-mYQ" secondAttribute="trailing" constant="20" id="RtI-OB-QQe"/>
-                            <constraint firstAttribute="trailing" secondItem="CCb-Kf-t7B" secondAttribute="trailing" constant="20" id="Yyt-EM-Bq4"/>
+                            <constraint firstAttribute="trailing" secondItem="OrU-An-xvL" secondAttribute="trailing" constant="20" id="U59-IE-TWX"/>
+                            <constraint firstItem="OrU-An-xvL" firstAttribute="top" secondItem="r97-1d-rtS" secondAttribute="bottom" constant="20" id="Vbd-MY-DYl"/>
                             <constraint firstAttribute="centerY" secondItem="r97-1d-rtS" secondAttribute="centerY" id="Yza-VO-r5e"/>
                             <constraint firstItem="r97-1d-rtS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="20" id="bpN-fu-MgI"/>
+                            <constraint firstAttribute="centerX" secondItem="OrU-An-xvL" secondAttribute="centerX" id="hfe-id-3by"/>
                             <constraint firstAttribute="centerX" secondItem="CoZ-0f-mYQ" secondAttribute="centerX" id="iNj-Vw-RMq"/>
-                            <constraint firstAttribute="centerX" secondItem="CCb-Kf-t7B" secondAttribute="centerX" id="n6S-az-yxn"/>
-                            <constraint firstItem="CoZ-0f-mYQ" firstAttribute="top" secondItem="CCb-Kf-t7B" secondAttribute="bottom" constant="20" id="zZK-6B-L0P"/>
-                            <constraint firstItem="CCb-Kf-t7B" firstAttribute="top" secondItem="r97-1d-rtS" secondAttribute="bottom" constant="20" id="zj9-vb-dA2"/>
+                            <constraint firstItem="OrU-An-xvL" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="20" id="wPN-dl-6V0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bag-4l-mRR"/>
                     <connections>
-                        <outlet property="buttonChange" destination="CCb-Kf-t7B" id="8Ke-x9-jYo"/>
+                        <outlet property="buttonChange" destination="CrG-yb-k1z" id="d0R-Ps-dhk"/>
+                        <outlet property="buttonDateDeparture" destination="OrU-An-xvL" id="cVt-mt-Xhc"/>
                         <outlet property="buttonFindTickets" destination="CoZ-0f-mYQ" id="3f8-Il-iBK"/>
                         <outlet property="buttonFromStation" destination="FSB-Nj-JKx" id="xgA-zN-gfq"/>
                         <outlet property="buttonToStation" destination="3ab-Q0-wl4" id="Vb3-OL-ApO"/>
@@ -119,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-641"/>
+            <point key="canvasLocation" x="906" y="-679"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GqE-zy-BIQ">
@@ -278,8 +291,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" width="27" height="23"/>
-        <image name="carFrom" width="280" height="49"/>
+        <image name="changeArrows" width="26" height="32"/>
         <image name="more" width="35" height="10"/>
         <image name="myTickets" width="30" height="20"/>
         <image name="tickets" width="24" height="27"/>

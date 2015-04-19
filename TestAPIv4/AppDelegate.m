@@ -25,8 +25,8 @@
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           WhiteColor, NSForegroundColorAttributeName, nil]];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          WhiteColor, NSForegroundColorAttributeName, nil]];
     
     [[UINavigationBar appearance] setTintColor:WhiteColor];
     

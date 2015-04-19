@@ -23,6 +23,10 @@
 #define SilverSandColor [UIColor colorWithHexString:@"#C2C2C2"] // light gray
 
 
+extern CGFloat const cornerRadius;
+extern CGFloat const borderWidth;
+
+
 //
 
 FOUNDATION_EXPORT NSString *const WeatherChangeNotification;

@@ -43,8 +43,10 @@
     
     [super viewDidLoad];
     
+    
     // MAIN VIEW
     self.view.backgroundColor = MintColor;
+    
     
     // LOGO
     UIImageView *logoView = [[UIImageView alloc]
@@ -55,48 +57,98 @@
     logoView.image = [UIImage imageNamed:@"logo"];
     [self.view addSubview:logoView];
     
+    
     // DOUBLE BUTTON VIEW
     self.doubleButtonView.backgroundColor = SilverTreeColor;
-    self.doubleButtonView.layer.cornerRadius = 4.5f;
+    self.doubleButtonView.layer.cornerRadius = cornerRadius;
     self.doubleButtonView.layer.borderColor = WhiteColor.CGColor;
-    self.doubleButtonView.layer.borderWidth = 2.f;
+    self.doubleButtonView.layer.borderWidth = borderWidth;
+    
     
     // BUTTON FROM STATION
     self.buttonFromStation.restorationIdentifier = @"from";
+    
     [self.buttonFromStation setBackgroundImage:[UIImage imageWithColor:MintColor]
                                       forState:UIControlStateHighlighted];
-    [self.buttonFromStation setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];    
+    
+    // направление контента внутри кновки:слева
+    self.buttonFromStation.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.buttonFromStation setImageEdgeInsets:UIEdgeInsetsMake(0.f, 16.f, 0.f, 0.f)];
+    [self.buttonFromStation setTitleEdgeInsets:UIEdgeInsetsMake(0.f, 24.f, 0.f, 0.f)];
+    
+    // иконка (слева) для кнопки
+    [self.buttonFromStation setImage:[UIImage imageNamed:@"carFrom"] forState:UIControlStateNormal];
+    
+    [self.buttonFromStation setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [self.buttonFromStation.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:16.f]];
     [self.buttonFromStation setTitle:@"Откуда" forState:UIControlStateNormal];
     
     // BUTTON TO STATION
     self.buttonToStation.restorationIdentifier = @"to";
+    
+    // цвета состояний
     [self.buttonToStation setBackgroundImage:[UIImage imageWithColor:MintColor]
-                                    forState:UIControlStateHighlighted];
+                                      forState:UIControlStateHighlighted];
+    
+    // направление контента внутри кновки:слева
+    self.buttonToStation.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.buttonToStation setImageEdgeInsets:UIEdgeInsetsMake(0.f, 16.f, 0.f, 0.f)];
+    [self.buttonToStation setTitleEdgeInsets:UIEdgeInsetsMake(0.f, 24.f, 0.f, 0.f)];
+    
+    // иконка (слева) для кнопки
+    [self.buttonToStation setImage:[UIImage imageNamed:@"carTo"] forState:UIControlStateNormal];
+    
     [self.buttonToStation setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [self.buttonToStation.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:16.f]];
     [self.buttonToStation setTitle:@"Куда" forState:UIControlStateNormal];
+    
     
     // BUTTON CHANGE
     self.buttonChange.backgroundColor = OceanGreenColor;
-    self.buttonChange.layer.cornerRadius = 4.5f;
+    self.buttonChange.layer.cornerRadius = cornerRadius;
     self.buttonChange.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.buttonChange.layer.borderWidth = 2.f;
+    self.buttonChange.layer.borderWidth = borderWidth;
     
-    // BUTTON DATE DEPARTURE
+    
+    // BUTTON DATE DEPARTURE //
+    
+    // цвета состояний
     self.buttonDateDeparture.backgroundColor = SilverTreeColor;
     [self.buttonDateDeparture setBackgroundImage:[UIImage imageWithColor:MintColor]
                                         forState:UIControlStateHighlighted];
-    self.buttonDateDeparture.layer.cornerRadius = 4.5f;
-    self.buttonDateDeparture.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.buttonDateDeparture.layer.borderWidth = 2.f;
+    
+    // обводка и радиус скругления кнопки
+    self.buttonDateDeparture.layer.cornerRadius = cornerRadius;
+    self.buttonDateDeparture.layer.borderColor = WhiteColor.CGColor;
+    self.buttonDateDeparture.layer.borderWidth = borderWidth;
+    
+    // направление контента внутри кновки:слева
+    self.buttonDateDeparture.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.buttonDateDeparture setImageEdgeInsets:UIEdgeInsetsMake(0.f, 16.f, 0.f, 0.f)];
+    [self.buttonDateDeparture setTitleEdgeInsets:UIEdgeInsetsMake(0.f, 31.f, 0.f, 0.f)];
+    
+    // иконка (слева) для кнопки
+    [self.buttonDateDeparture setImage:[UIImage imageNamed:@"calendar"] forState:UIControlStateNormal];
+    
+    // шрифт и текст кнопки
     [self.buttonDateDeparture setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [self.buttonDateDeparture.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:16.f]];
     [self.buttonDateDeparture setTitle:@"Дата отправления" forState:UIControlStateNormal];
     
+    
     // BUTTON FIND TICKETS
+    
+    // цвета кнопки
     self.buttonFindTickets.backgroundColor = WhiteColor;
-    self.buttonFindTickets.layer.cornerRadius = 4.5f;
+    
+    // радиус скругления кнопки
+    self.buttonFindTickets.layer.cornerRadius = cornerRadius;
+    
+    // шрифт и текст кнопки
+    [self.buttonFindTickets setTitleColor:MintColor forState:UIControlStateNormal];
+    [self.buttonFindTickets setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [self.buttonFindTickets setTitle:@"Найти билеты" forState:UIControlStateNormal];
-    [self.buttonFindTickets.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:16.f]];
-    self.buttonFindTickets.tintColor = MintColor;
+    [self.buttonFindTickets.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:17.f]];
 }
 
 - (void)didReceiveMemoryWarning {
