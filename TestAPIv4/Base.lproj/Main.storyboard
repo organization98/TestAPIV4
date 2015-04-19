@@ -152,6 +152,42 @@
             </objects>
             <point key="canvasLocation" x="1484" y="-679"/>
         </scene>
+        <!--Pre Start Controller-->
+        <scene sceneID="BkD-6p-S1d">
+            <objects>
+                <viewController id="8f3-1d-sP2" customClass="PreStartController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pws-pX-gFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsw-oo-mCl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PlM-Dl-EVL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mh8-hz-HfT">
+                                <rect key="frame" x="36" y="241" width="249" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="1mx-Wv-gAQ"/>
+                                    <constraint firstAttribute="width" constant="249" id="ZcO-UC-Jrd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mh8-hz-HfT" secondAttribute="centerY" id="CIO-Nv-ZYx"/>
+                            <constraint firstAttribute="centerX" secondItem="mh8-hz-HfT" secondAttribute="centerX" id="pqq-rG-dag"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3kp-VJ-nPY"/>
+                    <connections>
+                        <outlet property="imageViewLogo" destination="mh8-hz-HfT" id="Y29-GC-z5X"/>
+                        <segue destination="9pv-A4-QxB" kind="custom" identifier="splash" customClass="SplashSegue" id="bGg-SM-CQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syu-xy-hXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="-1378"/>
+        </scene>
         <!--Choise Station Controller-->
         <scene sceneID="ihR-pE-mYb">
             <objects>
@@ -282,7 +318,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="GXX-la-6FG"/>
+                        <segue destination="8f3-1d-sP2" kind="relationship" relationship="rootViewController" id="lLf-da-MLb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsj-RB-qJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,6 +328,7 @@
     </scenes>
     <resources>
         <image name="changeArrows" width="26" height="32"/>
+        <image name="logo" width="249" height="85"/>
         <image name="more" width="35" height="10"/>
         <image name="myTickets" width="30" height="20"/>
         <image name="tickets" width="24" height="27"/>

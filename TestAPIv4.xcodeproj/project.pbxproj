@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321E4C431AE3806900A455D9 /* PreStartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321E4C421AE3806900A455D9 /* PreStartController.m */; };
+		321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 321E4C451AE3854600A455D9 /* SplashSegue.m */; };
 		321F7D771AE27241005DAEFE /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D761AE27241005DAEFE /* ChoiseStationController.m */; };
 		321F7D7A1AE2724C005DAEFE /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D791AE2724C005DAEFE /* DateDepartureController.m */; };
 		321F7DB51AE272BB005DAEFE /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D7E1AE272BB005DAEFE /* AFHTTPRequestOperation.m */; };
@@ -91,6 +93,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321E4C411AE3806900A455D9 /* PreStartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartController.h; sourceTree = "<group>"; };
+		321E4C421AE3806900A455D9 /* PreStartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartController.m; sourceTree = "<group>"; };
+		321E4C441AE3854600A455D9 /* SplashSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashSegue.h; sourceTree = "<group>"; };
+		321E4C451AE3854600A455D9 /* SplashSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashSegue.m; sourceTree = "<group>"; };
 		321F7D751AE27241005DAEFE /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
 		321F7D761AE27241005DAEFE /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
 		321F7D781AE2724C005DAEFE /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
@@ -248,6 +254,8 @@
 		321F7D741AE27207005DAEFE /* BuyTickets Tab */ = {
 			isa = PBXGroup;
 			children = (
+				321E4C411AE3806900A455D9 /* PreStartController.h */,
+				321E4C421AE3806900A455D9 /* PreStartController.m */,
 				328D92DC1AE25B76006BDD04 /* StartController.h */,
 				328D92DD1AE25B76006BDD04 /* StartController.m */,
 				321F7D751AE27241005DAEFE /* ChoiseStationController.h */,
@@ -410,6 +418,8 @@
 				321F7DF81AE27680005DAEFE /* SchemeType40.h */,
 				321F7DF91AE27680005DAEFE /* SchemeType40.m */,
 				321F7DFA1AE27680005DAEFE /* SchemeType40.xib */,
+				321E4C441AE3854600A455D9 /* SplashSegue.h */,
+				321E4C451AE3854600A455D9 /* SplashSegue.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -683,6 +693,7 @@
 				321F7D7A1AE2724C005DAEFE /* DateDepartureController.m in Sources */,
 				321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */,
 				321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */,
+				321E4C431AE3806900A455D9 /* PreStartController.m in Sources */,
 				321F7DC81AE272BB005DAEFE /* UIAlertView+AFNetworking.m in Sources */,
 				321F7DB71AE272BB005DAEFE /* AFHTTPSessionManager.m in Sources */,
 				321F7DEB1AE275EB005DAEFE /* Constants.m in Sources */,
@@ -704,6 +715,7 @@
 				321F7E051AE27850005DAEFE /* Route.m in Sources */,
 				321F7DC21AE272BB005DAEFE /* RSDFDatePickerDayCell.m in Sources */,
 				321F7DDB1AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m in Sources */,
+				321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */,
 				321F7DC71AE272BB005DAEFE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				321F7DC11AE272BB005DAEFE /* RSDFDatePickerCollectionViewLayout.m in Sources */,
 			);
