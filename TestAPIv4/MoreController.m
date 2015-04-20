@@ -7,6 +7,7 @@
 //
 
 #import "MoreController.h"
+#import "Constants.h"
 
 @interface MoreController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = MintColor;
 }
 
 - (void)didReceiveMemoryWarning {

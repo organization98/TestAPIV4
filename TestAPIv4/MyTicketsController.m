@@ -7,6 +7,7 @@
 //
 
 #import "MyTicketsController.h"
+#import "Constants.h"
 
 @interface MyTicketsController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = MintColor;
 }
 
 - (void)didReceiveMemoryWarning {
