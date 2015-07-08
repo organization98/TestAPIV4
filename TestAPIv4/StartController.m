@@ -47,10 +47,10 @@
     
     // LOGO
     UIImageView *logoView = [[UIImageView alloc]
-                             initWithFrame:CGRectMake((self.view.bounds.size.width - 249) / 2,
-                                                      (((self.view.bounds.size.height - 99) / 2) - 85) / 2,
-                                                      249,
-                                                      85)];
+                             initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 249.f) / 2,
+                                                      (((CGRectGetHeight([UIScreen mainScreen].bounds) - 99.f) / 2) - 85) / 2,
+                                                      249.f,
+                                                      85.f)];
     logoView.image = [UIImage imageNamed:@"logo"];
     [self.view addSubview:logoView];
     

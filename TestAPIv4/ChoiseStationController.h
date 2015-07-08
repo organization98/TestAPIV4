@@ -18,7 +18,7 @@
 @end
 
 
-@interface ChoiseStationController : UIViewController
+@interface ChoiseStationController : UITableViewController
 
 @property (nonatomic, strong) id <ChoiseStationControllerDelegate> delegate;
 

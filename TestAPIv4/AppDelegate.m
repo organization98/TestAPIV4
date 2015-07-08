@@ -22,13 +22,12 @@
     
     // изменение цвета NavigationBar и цвета шрифта кнопок
     [[UINavigationBar appearance] setBarTintColor:MintColor];
-    
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
+    [[UINavigationBar appearance] setTintColor:WhiteColor];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                           WhiteColor, NSForegroundColorAttributeName, nil]];
     
-    [[UINavigationBar appearance] setTintColor:WhiteColor];
+    [[UISearchBar appearance] setTintColor:MintColor];
+    [[UISearchBar appearance] setBarTintColor:MintColor];
     
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:MintColor];

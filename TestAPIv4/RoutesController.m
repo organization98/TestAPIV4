@@ -43,9 +43,6 @@
     
     [super viewDidLoad];
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
     self.navigationItem.title = NSStringFromClass([RoutesController class]);
     
     pricesManager = [[PricesManager alloc] init];

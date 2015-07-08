@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8f3-1d-sP2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8f3-1d-sP2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Start Controller-->
@@ -28,7 +29,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ncM-nA-sFn" kind="push" identifier="showFromStation" id="uNK-Vj-MSf"/>
+                                            <segue destination="3Zp-J7-G2j" kind="push" identifier="showFromStation" id="KI0-j3-LtT"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="np7-Ue-5YU">
@@ -47,7 +48,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ncM-nA-sFn" kind="push" identifier="showToStation" id="2p5-yi-zZm"/>
+                                            <segue destination="3Zp-J7-G2j" kind="push" identifier="showToStation" id="xlo-YW-NEP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-yb-k1z">
@@ -89,9 +90,6 @@
                                 <state key="normal" title="find">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="XML-fi-4PD" kind="push" id="A92-ct-1TO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrU-An-xvL">
                                 <rect key="frame" x="20" y="354" width="280" height="48"/>
@@ -136,25 +134,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="894" y="0.0"/>
-        </scene>
-        <!--Routes Controller-->
-        <scene sceneID="GqE-zy-BIQ">
-            <objects>
-                <viewController id="XML-fi-4PD" customClass="RoutesController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Np-kg-suz"/>
-                        <viewControllerLayoutGuide type="bottom" id="wz0-vf-JSQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XEL-K1-07V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sFB-vn-BKH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ndA-es-6aY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1334" y="0.0"/>
         </scene>
         <!--Pre Start Controller-->
         <scene sceneID="BkD-6p-S1d">
@@ -201,7 +180,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tBG-Qa-mqO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hih-qm-198">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -267,6 +246,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acr-1u-bmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2240" y="0.0"/>
+        </scene>
+        <!--Choise Station Controller-->
+        <scene sceneID="H8s-jH-a8K">
+            <objects>
+                <tableViewController id="3Zp-J7-G2j" customClass="ChoiseStationController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kdY-tE-Hi8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="o3P-3Q-YYT">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="3Zp-J7-G2j" id="EcG-fP-QEt"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ok0-JM-w73">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ok0-JM-w73" id="k2g-VE-70r">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Zp-J7-G2j" id="wB2-ya-vmP"/>
+                            <outlet property="delegate" destination="3Zp-J7-G2j" id="ZRr-MI-fo0"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="rpf-7T-JpQ"/>
+                    <connections>
+                        <outlet property="searchField" destination="o3P-3Q-YYT" id="8P9-QB-Q66"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcx-5S-qqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="0.0"/>
         </scene>
         <!--My Tickets-->
         <scene sceneID="wg7-f3-ORb">
@@ -397,6 +415,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uNK-Vj-MSf"/>
+        <segue reference="xlo-YW-NEP"/>
     </inferredMetricsTieBreakers>
 </document>

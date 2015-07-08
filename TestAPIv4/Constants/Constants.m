@@ -8,7 +8,7 @@
 
 #import "Constants.h"
 
-CGFloat const cornerRadius = 4.5f;
+CGFloat const cornerRadius = 5.f;
 CGFloat const borderWidth = 2.f;
 
 
