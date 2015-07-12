@@ -8,24 +8,14 @@
 
 #import "ChoiseStationController.h"
 #import "StartController.h"
-//#import "Route.h"
-#import "Constants.h"
-#import "SessionManager.h"
-#import "NSArray+Stations.h"
 
 @interface ChoiseStationController () <UITextFieldDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating>
 
 @property (weak, nonatomic) IBOutlet UISearchController *searchField;
 @property (strong, nonatomic) NSArray *stations;
-
 @property (strong, nonatomic) UISearchController *searchController;
 
 @end
-
-static NSString *const kStationCode = @"code";
-static NSString *const kStationNameLT = @"name_lt";
-static NSString *const kStationNameUK = @"name_uk";
-static NSString *const kStationNameRU = @"name_ru";
 
 static NSString *const cellIdentifier = @"Cell";
 
@@ -46,16 +36,6 @@ static NSString *const cellIdentifier = @"Cell";
     self.definesPresentationContext = YES;
     
     [self.searchController.searchBar sizeToFit];
-    
-    // Above ios 8.0
-//    float os_version = [[[UIDevice currentDevice] systemVersion] floatValue];
-//    if (os_version >= 8.000000) {
-////        Use UISearchController
-//        self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchDisplayController];
-//    } else {
-////        use UISearchDisaplyController
-//        self.controller = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
-//    }
     
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;

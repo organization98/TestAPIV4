@@ -22,7 +22,8 @@
     NSDictionary *dict;
 }
 
-+ (SessionManager *)sharedManager {
++ (SessionManager *)sharedManager
+{
     static SessionManager *manager = nil;
     static dispatch_once_t onceTaken;
     dispatch_once (&onceTaken, ^{
@@ -31,7 +32,8 @@
     return manager;
 }
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self) {
         username = @"demo";
@@ -41,7 +43,8 @@
     return self;
 }
 
-- (void)requestFromURL:(NSURL *)url completion:(NetworkBlock)block {
+- (void)requestFromURL:(NSURL *)url completion:(NetworkBlock)block
+{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:url.absoluteString parameters:nil success:
      ^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -58,14 +61,16 @@
      }];
 }
 
-- (void)open:(NetworkBlock)block {
+- (void)open:(NetworkBlock)block
+{
+    NSURL *urlOffLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@&mode=offline", domain, username, password]];
+    NSURL *urlOnLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@", domain, username, password]];
+    
     if (session.length >  0){
         block (YES, nil, nil);
         return;
     }
     // Выполнить транзакцию авторизации, сохраниить сессию
-    NSURL *urlOffLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@&mode=offline", domain, username, password]];
-    NSURL *urlOnLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@", domain, username, password]];
     [self requestFromURL: urlOnLine completion:^(BOOL succes, id data, NSError *error) {
         if ([[data objectForKey:@"result"] isEqual:@"OK"]) {
             session = [data objectForKey:@"session"];
@@ -76,7 +81,8 @@
     return;
 }
 
-- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block {
+- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block
+{
     // выполнение транзакции "trains"
     NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, stationFrom, stationTo, date, session]];
     [self requestFromURL:requestURL completion:^(BOOL succes, id data, NSError *error) {
@@ -89,12 +95,14 @@
 }
 
 // перенести в категорию
-- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error {
+- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error
+{
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
 }
 
-- (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block {
+- (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block
+{
     NSString *requestURL = [NSString stringWithFormat:@"%@/prices?train=%@&session=%@", domain, train, session];
     NSURL *url = [NSURL URLWithString:[requestURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self requestFromURL:url completion:^(BOOL succes, id data, NSError *error) {
@@ -120,7 +128,7 @@
 }
 
 - (NSDictionary *)getPlaces:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls {
-    return [NSDictionary new];
+    return [[NSDictionary alloc] init];
 }
 
 @end

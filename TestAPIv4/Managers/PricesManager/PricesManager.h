@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SessionManager.h"
-#import "RoutesController.h"
-#import "RoutesCustomCell.h"
+
+@class RoutesCustomCell;
 
 @interface PricesManager : NSObject
 

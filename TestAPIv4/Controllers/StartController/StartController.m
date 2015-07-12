@@ -56,9 +56,9 @@
     
     // DOUBLE BUTTON VIEW
     self.doubleButtonView.backgroundColor = SilverTreeColor;
-    self.doubleButtonView.layer.cornerRadius = cornerRadius;
+    self.doubleButtonView.layer.cornerRadius = CornerRadius;
     self.doubleButtonView.layer.borderColor = WhiteColor.CGColor;
-    self.doubleButtonView.layer.borderWidth = borderWidth;
+    self.doubleButtonView.layer.borderWidth = BorderWidth;
     
     
     // BUTTON FROM STATION
@@ -75,9 +75,9 @@
     
     // BUTTON CHANGE
     self.buttonChange.backgroundColor = OceanGreenColor;
-    self.buttonChange.layer.cornerRadius = cornerRadius;
+    self.buttonChange.layer.cornerRadius = CornerRadius;
     self.buttonChange.layer.borderColor = WhiteColor.CGColor;
-    self.buttonChange.layer.borderWidth = borderWidth;
+    self.buttonChange.layer.borderWidth = BorderWidth;
     
     // BUTTON DATE DEPARTURE //
     [self customizeButton:self.buttonDateDeparture
@@ -85,14 +85,14 @@
                  setImage:@"calendar"
                  setTitle:@"Дата отправления"];
     // обводка и радиус скругления кнопки
-    self.buttonDateDeparture.layer.cornerRadius = cornerRadius;
+    self.buttonDateDeparture.layer.cornerRadius = CornerRadius;
     self.buttonDateDeparture.layer.borderColor = WhiteColor.CGColor;
-    self.buttonDateDeparture.layer.borderWidth = borderWidth;
+    self.buttonDateDeparture.layer.borderWidth = BorderWidth;
     
     
     // BUTTON FIND TICKETS
     self.buttonFindTickets.backgroundColor = WhiteColor; // цвета кнопки
-    self.buttonFindTickets.layer.cornerRadius = cornerRadius; // радиус скругления кнопки
+    self.buttonFindTickets.layer.cornerRadius = CornerRadius; // радиус скругления кнопки
     // шрифт и текст кнопки
     [self.buttonFindTickets setTitleColor:MintColor forState:UIControlStateNormal];
     [self.buttonFindTickets setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];

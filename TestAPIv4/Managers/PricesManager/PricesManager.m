@@ -7,13 +7,15 @@
 //
 
 #import "PricesManager.h"
-
+#import "RoutesController.h"
+#import "RoutesCustomCell.h"
 
 @implementation PricesManager  {
     NSMutableDictionary *pricesDict;
 }
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self) {
         pricesDict = [[NSMutableDictionary alloc] init];
@@ -21,7 +23,8 @@
     return self;
 }
 
-- (NSDictionary *)getPrice:(NSString *)train from:(RoutesCustomCell *)cell {
+- (NSDictionary *)getPrice:(NSString *)train from:(RoutesCustomCell *)cell
+{
     if ([pricesDict objectForKey:train]) {
         if ([[pricesDict objectForKey:train] isKindOfClass:[NSDictionary class]]) {
             return [pricesDict objectForKey:train];

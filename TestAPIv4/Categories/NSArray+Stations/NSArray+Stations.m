@@ -10,11 +10,6 @@
 
 @implementation NSArray (Stations)
 
-static NSString *const kStationCode = @"code";
-static NSString *const kStationNameLT = @"name_lt";
-static NSString *const kStationNameUK = @"name_uk";
-static NSString *const kStationNameRU = @"name_ru";
-
 + (NSArray *)stationsArray
 {
     static dispatch_once_t onceToken;

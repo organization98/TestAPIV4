@@ -7,8 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1D1A9F1B51C9BF0026376D /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D1A9E1B51C9BF0026376D /* all_stations.plist */; };
-		2C94380A1B514D6B00D543A9 /* NSArray+Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9438091B514D6B00D543A9 /* NSArray+Stations.m */; };
+		2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */; };
+		2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00061B526AF6003E2D27 /* DateDepartureController.m */; };
+		2CDA000B1B526B0B003E2D27 /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA000A1B526B0B003E2D27 /* RoutesController.m */; };
+		2CDA000F1B526B1D003E2D27 /* SchemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA000E1B526B1D003E2D27 /* SchemeController.m */; };
+		2CDA00131B526B2B003E2D27 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00121B526B2B003E2D27 /* WebViewController.m */; };
+		2CDA00171B526B4B003E2D27 /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00161B526B4B003E2D27 /* MyTicketsController.m */; };
+		2CDA001B1B526B64003E2D27 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA001A1B526B64003E2D27 /* MoreController.m */; };
+		2CDA001F1B526BD6003E2D27 /* NSArray+Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA001E1B526BD6003E2D27 /* NSArray+Stations.m */; };
+		2CDA00231B526BDD003E2D27 /* NSString+ContainsStrModernizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00221B526BDD003E2D27 /* NSString+ContainsStrModernizer.m */; };
+		2CDA00271B526BE4003E2D27 /* NSString+NSDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00261B526BE4003E2D27 /* NSString+NSDateFormatter.m */; };
+		2CDA002B1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA002A1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m */; };
+		2CDA002F1B526BF1003E2D27 /* UIColor+ConvertHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA002E1B526BF1003E2D27 /* UIColor+ConvertHEX.m */; };
+		2CDA00331B526BF7003E2D27 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00321B526BF7003E2D27 /* UIImage+ImageWithColor.m */; };
+		2CDA00371B526C2E003E2D27 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00361B526C2E003E2D27 /* PricesManager.m */; };
+		2CDA003B1B526C34003E2D27 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA003A1B526C34003E2D27 /* SessionManager.m */; };
+		2CDAFFE91B526043003E2D27 /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFE81B526043003E2D27 /* all_stations.plist */; };
+		2CDAFFEF1B5268E6003E2D27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */; };
+		2CDAFFF11B526970003E2D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFF01B526970003E2D27 /* Images.xcassets */; };
+		2CDAFFF51B5269D4003E2D27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFF41B5269D4003E2D27 /* AppDelegate.m */; };
+		2CDAFFFB1B526ABE003E2D27 /* PreStartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFFA1B526ABE003E2D27 /* PreStartController.m */; };
+		2CDAFFFF1B526ACF003E2D27 /* StartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFFE1B526ACF003E2D27 /* StartController.m */; };
 		3202F4E81AE52376006563FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */; };
 		3202F4E91AE52376006563FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D81AE52376006563FD /* AFHTTPRequestOperationManager.m */; };
 		3202F4EA1AE52376006563FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4DA1AE52376006563FD /* AFHTTPSessionManager.m */; };
@@ -18,10 +37,7 @@
 		3202F4EE1AE52376006563FD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E31AE52376006563FD /* AFURLRequestSerialization.m */; };
 		3202F4EF1AE52376006563FD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E51AE52376006563FD /* AFURLResponseSerialization.m */; };
 		3202F4F01AE52376006563FD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E71AE52376006563FD /* AFURLSessionManager.m */; };
-		321E4C431AE3806900A455D9 /* PreStartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321E4C421AE3806900A455D9 /* PreStartController.m */; };
 		321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 321E4C451AE3854600A455D9 /* SplashSegue.m */; };
-		321F7D771AE27241005DAEFE /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D761AE27241005DAEFE /* ChoiseStationController.m */; };
-		321F7D7A1AE2724C005DAEFE /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D791AE2724C005DAEFE /* DateDepartureController.m */; };
 		321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D921AE272BB005DAEFE /* DejalActivityView.m */; };
 		321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D951AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m */; };
 		321F7DC01AE272BB005DAEFE /* RSDFDatePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D981AE272BB005DAEFE /* RSDFDatePickerCollectionView.m */; };
@@ -38,17 +54,6 @@
 		321F7DCB1AE272BB005DAEFE /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB01AE272BB005DAEFE /* UIProgressView+AFNetworking.m */; };
 		321F7DCC1AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB21AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m */; };
 		321F7DCD1AE272BB005DAEFE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB41AE272BB005DAEFE /* UIWebView+AFNetworking.m */; };
-		321F7DD91AE27324005DAEFE /* NSString+ContainsStrModernizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DD01AE27324005DAEFE /* NSString+ContainsStrModernizer.m */; };
-		321F7DDA1AE27324005DAEFE /* NSString+NSDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DD21AE27324005DAEFE /* NSString+NSDateFormatter.m */; };
-		321F7DDB1AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DD41AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m */; };
-		321F7DDC1AE27324005DAEFE /* UIColor+ConvertHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DD61AE27324005DAEFE /* UIColor+ConvertHEX.m */; };
-		321F7DDD1AE27324005DAEFE /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DD81AE27324005DAEFE /* UIImage+ImageWithColor.m */; };
-		321F7DE01AE2743C005DAEFE /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DDF1AE2743C005DAEFE /* RoutesController.m */; };
-		321F7DE61AE2757D005DAEFE /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DE31AE2757D005DAEFE /* PricesManager.m */; };
-		321F7DE71AE2757D005DAEFE /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DE51AE2757D005DAEFE /* SessionManager.m */; };
-		321F7DEB1AE275EB005DAEFE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DEA1AE275EB005DAEFE /* Constants.m */; };
-		321F7DF01AE2761C005DAEFE /* SchemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DED1AE2761C005DAEFE /* SchemeController.m */; };
-		321F7DF11AE2761C005DAEFE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DEF1AE2761C005DAEFE /* WebViewController.m */; };
 		321F7DFB1AE27680005DAEFE /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DF41AE27680005DAEFE /* CustomButton.m */; };
 		321F7DFC1AE27680005DAEFE /* RoutesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DF61AE27680005DAEFE /* RoutesCustomCell.m */; };
 		321F7DFD1AE27680005DAEFE /* RoutesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321F7DF71AE27680005DAEFE /* RoutesCustomCell.xib */; };
@@ -74,14 +79,9 @@
 		321F7E291AE28317005DAEFE /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321F7E171AE28317005DAEFE /* RobotoCondensed-LightItalic.ttf */; };
 		321F7E2A1AE28317005DAEFE /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321F7E181AE28317005DAEFE /* RobotoCondensed-Regular.ttf */; };
 		328D92D81AE25B76006BDD04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D92D71AE25B76006BDD04 /* main.m */; };
-		328D92DB1AE25B76006BDD04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D92DA1AE25B76006BDD04 /* AppDelegate.m */; };
-		328D92DE1AE25B76006BDD04 /* StartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D92DD1AE25B76006BDD04 /* StartController.m */; };
-		328D92E11AE25B76006BDD04 /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D92E01AE25B76006BDD04 /* MyTicketsController.m */; };
 		328D92E41AE25B76006BDD04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328D92E21AE25B76006BDD04 /* Main.storyboard */; };
-		328D92E61AE25B76006BDD04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328D92E51AE25B76006BDD04 /* Images.xcassets */; };
 		328D92E91AE25B76006BDD04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328D92E71AE25B76006BDD04 /* LaunchScreen.xib */; };
 		328D92F51AE25B76006BDD04 /* TestAPIv4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D92F41AE25B76006BDD04 /* TestAPIv4Tests.m */; };
-		328D93021AE25C80006BDD04 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328D93011AE25C80006BDD04 /* MoreController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +95,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C1D1A9E1B51C9BF0026376D /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = all_stations.plist; sourceTree = "<group>"; };
-		2C9438081B514D6B00D543A9 /* NSArray+Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Stations.h"; sourceTree = "<group>"; };
-		2C9438091B514D6B00D543A9 /* NSArray+Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Stations.m"; sourceTree = "<group>"; };
+		2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
+		2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
+		2CDA00051B526AF6003E2D27 /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
+		2CDA00061B526AF6003E2D27 /* DateDepartureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateDepartureController.m; sourceTree = "<group>"; };
+		2CDA00091B526B0B003E2D27 /* RoutesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesController.h; sourceTree = "<group>"; };
+		2CDA000A1B526B0B003E2D27 /* RoutesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesController.m; sourceTree = "<group>"; };
+		2CDA000D1B526B1D003E2D27 /* SchemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeController.h; sourceTree = "<group>"; };
+		2CDA000E1B526B1D003E2D27 /* SchemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeController.m; sourceTree = "<group>"; };
+		2CDA00111B526B2B003E2D27 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		2CDA00121B526B2B003E2D27 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2CDA00151B526B4B003E2D27 /* MyTicketsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketsController.h; sourceTree = "<group>"; };
+		2CDA00161B526B4B003E2D27 /* MyTicketsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketsController.m; sourceTree = "<group>"; };
+		2CDA00191B526B64003E2D27 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreController.h; sourceTree = "<group>"; };
+		2CDA001A1B526B64003E2D27 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreController.m; sourceTree = "<group>"; };
+		2CDA001D1B526BD6003E2D27 /* NSArray+Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Stations.h"; sourceTree = "<group>"; };
+		2CDA001E1B526BD6003E2D27 /* NSArray+Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Stations.m"; sourceTree = "<group>"; };
+		2CDA00211B526BDD003E2D27 /* NSString+ContainsStrModernizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ContainsStrModernizer.h"; sourceTree = "<group>"; };
+		2CDA00221B526BDD003E2D27 /* NSString+ContainsStrModernizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ContainsStrModernizer.m"; sourceTree = "<group>"; };
+		2CDA00251B526BE4003E2D27 /* NSString+NSDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSDateFormatter.h"; sourceTree = "<group>"; };
+		2CDA00261B526BE4003E2D27 /* NSString+NSDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSDateFormatter.m"; sourceTree = "<group>"; };
+		2CDA00291B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+IgnoreSSL.h"; sourceTree = "<group>"; };
+		2CDA002A1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+IgnoreSSL.m"; sourceTree = "<group>"; };
+		2CDA002D1B526BF1003E2D27 /* UIColor+ConvertHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ConvertHEX.h"; sourceTree = "<group>"; };
+		2CDA002E1B526BF1003E2D27 /* UIColor+ConvertHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ConvertHEX.m"; sourceTree = "<group>"; };
+		2CDA00311B526BF7003E2D27 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		2CDA00321B526BF7003E2D27 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		2CDA00351B526C2E003E2D27 /* PricesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricesManager.h; sourceTree = "<group>"; };
+		2CDA00361B526C2E003E2D27 /* PricesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesManager.m; sourceTree = "<group>"; };
+		2CDA00391B526C34003E2D27 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		2CDA003A1B526C34003E2D27 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		2CDAFFE51B525FA3003E2D27 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
+		2CDAFFE61B525FA3003E2D27 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SupportingFiles/PrefixHeader.pch; sourceTree = "<group>"; };
+		2CDAFFE81B526043003E2D27 /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = all_stations.plist; path = "Resources/Property List/all_stations.plist"; sourceTree = "<group>"; };
+		2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
+		2CDAFFF01B526970003E2D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		2CDAFFF31B5269D4003E2D27 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CDAFFF41B5269D4003E2D27 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CDAFFF91B526ABE003E2D27 /* PreStartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartController.h; sourceTree = "<group>"; };
+		2CDAFFFA1B526ABE003E2D27 /* PreStartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartController.m; sourceTree = "<group>"; };
+		2CDAFFFD1B526ACF003E2D27 /* StartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartController.h; sourceTree = "<group>"; };
+		2CDAFFFE1B526ACF003E2D27 /* StartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartController.m; sourceTree = "<group>"; };
 		3202F4D51AE52376006563FD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3202F4D71AE52376006563FD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -117,14 +155,8 @@
 		3202F4E51AE52376006563FD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		3202F4E61AE52376006563FD /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		3202F4E71AE52376006563FD /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		321E4C411AE3806900A455D9 /* PreStartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartController.h; sourceTree = "<group>"; };
-		321E4C421AE3806900A455D9 /* PreStartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartController.m; sourceTree = "<group>"; };
 		321E4C441AE3854600A455D9 /* SplashSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashSegue.h; sourceTree = "<group>"; };
 		321E4C451AE3854600A455D9 /* SplashSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashSegue.m; sourceTree = "<group>"; };
-		321F7D751AE27241005DAEFE /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
-		321F7D761AE27241005DAEFE /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
-		321F7D781AE2724C005DAEFE /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
-		321F7D791AE2724C005DAEFE /* DateDepartureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateDepartureController.m; sourceTree = "<group>"; };
 		321F7D911AE272BB005DAEFE /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		321F7D921AE272BB005DAEFE /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		321F7D941AE272BB005DAEFE /* NSCalendar+RSDFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+RSDFAdditions.h"; sourceTree = "<group>"; };
@@ -159,28 +191,6 @@
 		321F7DB21AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		321F7DB31AE272BB005DAEFE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		321F7DB41AE272BB005DAEFE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		321F7DCF1AE27324005DAEFE /* NSString+ContainsStrModernizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ContainsStrModernizer.h"; sourceTree = "<group>"; };
-		321F7DD01AE27324005DAEFE /* NSString+ContainsStrModernizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ContainsStrModernizer.m"; sourceTree = "<group>"; };
-		321F7DD11AE27324005DAEFE /* NSString+NSDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSDateFormatter.h"; sourceTree = "<group>"; };
-		321F7DD21AE27324005DAEFE /* NSString+NSDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSDateFormatter.m"; sourceTree = "<group>"; };
-		321F7DD31AE27324005DAEFE /* NSURLRequest+IgnoreSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+IgnoreSSL.h"; sourceTree = "<group>"; };
-		321F7DD41AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+IgnoreSSL.m"; sourceTree = "<group>"; };
-		321F7DD51AE27324005DAEFE /* UIColor+ConvertHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ConvertHEX.h"; sourceTree = "<group>"; };
-		321F7DD61AE27324005DAEFE /* UIColor+ConvertHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ConvertHEX.m"; sourceTree = "<group>"; };
-		321F7DD71AE27324005DAEFE /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
-		321F7DD81AE27324005DAEFE /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
-		321F7DDE1AE2743C005DAEFE /* RoutesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesController.h; sourceTree = "<group>"; };
-		321F7DDF1AE2743C005DAEFE /* RoutesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesController.m; sourceTree = "<group>"; };
-		321F7DE21AE2757D005DAEFE /* PricesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricesManager.h; sourceTree = "<group>"; };
-		321F7DE31AE2757D005DAEFE /* PricesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesManager.m; sourceTree = "<group>"; };
-		321F7DE41AE2757D005DAEFE /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
-		321F7DE51AE2757D005DAEFE /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
-		321F7DE91AE275EB005DAEFE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		321F7DEA1AE275EB005DAEFE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		321F7DEC1AE2761C005DAEFE /* SchemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeController.h; sourceTree = "<group>"; };
-		321F7DED1AE2761C005DAEFE /* SchemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeController.m; sourceTree = "<group>"; };
-		321F7DEE1AE2761C005DAEFE /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		321F7DEF1AE2761C005DAEFE /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		321F7DF31AE27680005DAEFE /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		321F7DF41AE27680005DAEFE /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		321F7DF51AE27680005DAEFE /* RoutesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesCustomCell.h; sourceTree = "<group>"; };
@@ -212,20 +222,11 @@
 		328D92D21AE25B76006BDD04 /* TestAPIv4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIv4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328D92D61AE25B76006BDD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328D92D71AE25B76006BDD04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		328D92D91AE25B76006BDD04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		328D92DA1AE25B76006BDD04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		328D92DC1AE25B76006BDD04 /* StartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartController.h; sourceTree = "<group>"; };
-		328D92DD1AE25B76006BDD04 /* StartController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartController.m; sourceTree = "<group>"; };
-		328D92DF1AE25B76006BDD04 /* MyTicketsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTicketsController.h; sourceTree = "<group>"; };
-		328D92E01AE25B76006BDD04 /* MyTicketsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTicketsController.m; sourceTree = "<group>"; };
 		328D92E31AE25B76006BDD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		328D92E51AE25B76006BDD04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		328D92E81AE25B76006BDD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		328D92EE1AE25B76006BDD04 /* TestAPIv4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAPIv4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328D92F31AE25B76006BDD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328D92F41AE25B76006BDD04 /* TestAPIv4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAPIv4Tests.m; sourceTree = "<group>"; };
-		328D93001AE25C80006BDD04 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreController.h; sourceTree = "<group>"; };
-		328D93011AE25C80006BDD04 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +247,185 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CDA00001B526AE2003E2D27 /* ChoiseStationController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */,
+				2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */,
+			);
+			name = ChoiseStationController;
+			path = Controllers/ChoiseStationController;
+			sourceTree = "<group>";
+		};
+		2CDA00041B526AF6003E2D27 /* DateDepartureController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00051B526AF6003E2D27 /* DateDepartureController.h */,
+				2CDA00061B526AF6003E2D27 /* DateDepartureController.m */,
+			);
+			name = DateDepartureController;
+			path = Controllers/DateDepartureController;
+			sourceTree = "<group>";
+		};
+		2CDA00081B526B0B003E2D27 /* RoutesController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00091B526B0B003E2D27 /* RoutesController.h */,
+				2CDA000A1B526B0B003E2D27 /* RoutesController.m */,
+			);
+			name = RoutesController;
+			path = Controllers/RoutesController;
+			sourceTree = "<group>";
+		};
+		2CDA000C1B526B1D003E2D27 /* SchemeController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA000D1B526B1D003E2D27 /* SchemeController.h */,
+				2CDA000E1B526B1D003E2D27 /* SchemeController.m */,
+			);
+			name = SchemeController;
+			path = Controllers/SchemeController;
+			sourceTree = "<group>";
+		};
+		2CDA00101B526B2B003E2D27 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00111B526B2B003E2D27 /* WebViewController.h */,
+				2CDA00121B526B2B003E2D27 /* WebViewController.m */,
+			);
+			name = WebViewController;
+			path = Controllers/WebViewController;
+			sourceTree = "<group>";
+		};
+		2CDA00141B526B4B003E2D27 /* MyTicketsController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00151B526B4B003E2D27 /* MyTicketsController.h */,
+				2CDA00161B526B4B003E2D27 /* MyTicketsController.m */,
+			);
+			name = MyTicketsController;
+			path = Controllers/MyTicketsController;
+			sourceTree = "<group>";
+		};
+		2CDA00181B526B64003E2D27 /* MoreController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00191B526B64003E2D27 /* MoreController.h */,
+				2CDA001A1B526B64003E2D27 /* MoreController.m */,
+			);
+			name = MoreController;
+			path = Controllers/MoreController;
+			sourceTree = "<group>";
+		};
+		2CDA001C1B526BD6003E2D27 /* NSArray+Stations */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA001D1B526BD6003E2D27 /* NSArray+Stations.h */,
+				2CDA001E1B526BD6003E2D27 /* NSArray+Stations.m */,
+			);
+			path = "NSArray+Stations";
+			sourceTree = "<group>";
+		};
+		2CDA00201B526BDD003E2D27 /* NSString+ContainsStrModernizer */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00211B526BDD003E2D27 /* NSString+ContainsStrModernizer.h */,
+				2CDA00221B526BDD003E2D27 /* NSString+ContainsStrModernizer.m */,
+			);
+			path = "NSString+ContainsStrModernizer";
+			sourceTree = "<group>";
+		};
+		2CDA00241B526BE4003E2D27 /* NSString+NSDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00251B526BE4003E2D27 /* NSString+NSDateFormatter.h */,
+				2CDA00261B526BE4003E2D27 /* NSString+NSDateFormatter.m */,
+			);
+			path = "NSString+NSDateFormatter";
+			sourceTree = "<group>";
+		};
+		2CDA00281B526BEB003E2D27 /* NSURLRequest+IgnoreSSL */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00291B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.h */,
+				2CDA002A1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m */,
+			);
+			path = "NSURLRequest+IgnoreSSL";
+			sourceTree = "<group>";
+		};
+		2CDA002C1B526BF1003E2D27 /* UIColor+ConvertHEX */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA002D1B526BF1003E2D27 /* UIColor+ConvertHEX.h */,
+				2CDA002E1B526BF1003E2D27 /* UIColor+ConvertHEX.m */,
+			);
+			path = "UIColor+ConvertHEX";
+			sourceTree = "<group>";
+		};
+		2CDA00301B526BF7003E2D27 /* UIImage+ImageWithColor */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00311B526BF7003E2D27 /* UIImage+ImageWithColor.h */,
+				2CDA00321B526BF7003E2D27 /* UIImage+ImageWithColor.m */,
+			);
+			path = "UIImage+ImageWithColor";
+			sourceTree = "<group>";
+		};
+		2CDA00341B526C2E003E2D27 /* PricesManager */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00351B526C2E003E2D27 /* PricesManager.h */,
+				2CDA00361B526C2E003E2D27 /* PricesManager.m */,
+			);
+			path = PricesManager;
+			sourceTree = "<group>";
+		};
+		2CDA00381B526C34003E2D27 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				2CDA00391B526C34003E2D27 /* SessionManager.h */,
+				2CDA003A1B526C34003E2D27 /* SessionManager.m */,
+			);
+			path = SessionManager;
+			sourceTree = "<group>";
+		};
+		2CDAFFE71B525FD0003E2D27 /* Property List */ = {
+			isa = PBXGroup;
+			children = (
+				2CDAFFE81B526043003E2D27 /* all_stations.plist */,
+			);
+			name = "Property List";
+			sourceTree = "<group>";
+		};
+		2CDAFFF21B5269D4003E2D27 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2CDAFFF31B5269D4003E2D27 /* AppDelegate.h */,
+				2CDAFFF41B5269D4003E2D27 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2CDAFFF81B526ABE003E2D27 /* PreStartController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDAFFF91B526ABE003E2D27 /* PreStartController.h */,
+				2CDAFFFA1B526ABE003E2D27 /* PreStartController.m */,
+			);
+			name = PreStartController;
+			path = Controllers/PreStartController;
+			sourceTree = "<group>";
+		};
+		2CDAFFFC1B526ACF003E2D27 /* StartController */ = {
+			isa = PBXGroup;
+			children = (
+				2CDAFFFD1B526ACF003E2D27 /* StartController.h */,
+				2CDAFFFE1B526ACF003E2D27 /* StartController.m */,
+			);
+			name = StartController;
+			path = Controllers/StartController;
+			sourceTree = "<group>";
+		};
 		3202F4D41AE52376006563FD /* AFNetworking 2.5.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,20 +466,13 @@
 		321F7D741AE27207005DAEFE /* BuyTickets Tab */ = {
 			isa = PBXGroup;
 			children = (
-				321E4C411AE3806900A455D9 /* PreStartController.h */,
-				321E4C421AE3806900A455D9 /* PreStartController.m */,
-				328D92DC1AE25B76006BDD04 /* StartController.h */,
-				328D92DD1AE25B76006BDD04 /* StartController.m */,
-				321F7D751AE27241005DAEFE /* ChoiseStationController.h */,
-				321F7D761AE27241005DAEFE /* ChoiseStationController.m */,
-				321F7D781AE2724C005DAEFE /* DateDepartureController.h */,
-				321F7D791AE2724C005DAEFE /* DateDepartureController.m */,
-				321F7DDE1AE2743C005DAEFE /* RoutesController.h */,
-				321F7DDF1AE2743C005DAEFE /* RoutesController.m */,
-				321F7DEC1AE2761C005DAEFE /* SchemeController.h */,
-				321F7DED1AE2761C005DAEFE /* SchemeController.m */,
-				321F7DEE1AE2761C005DAEFE /* WebViewController.h */,
-				321F7DEF1AE2761C005DAEFE /* WebViewController.m */,
+				2CDAFFF81B526ABE003E2D27 /* PreStartController */,
+				2CDAFFFC1B526ACF003E2D27 /* StartController */,
+				2CDA00001B526AE2003E2D27 /* ChoiseStationController */,
+				2CDA00041B526AF6003E2D27 /* DateDepartureController */,
+				2CDA00081B526B0B003E2D27 /* RoutesController */,
+				2CDA000C1B526B1D003E2D27 /* SchemeController */,
+				2CDA00101B526B2B003E2D27 /* WebViewController */,
 				321F7DF21AE27680005DAEFE /* Views */,
 			);
 			name = "BuyTickets Tab";
@@ -378,18 +551,12 @@
 		321F7DCE1AE27324005DAEFE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				321F7DCF1AE27324005DAEFE /* NSString+ContainsStrModernizer.h */,
-				321F7DD01AE27324005DAEFE /* NSString+ContainsStrModernizer.m */,
-				321F7DD11AE27324005DAEFE /* NSString+NSDateFormatter.h */,
-				321F7DD21AE27324005DAEFE /* NSString+NSDateFormatter.m */,
-				321F7DD31AE27324005DAEFE /* NSURLRequest+IgnoreSSL.h */,
-				321F7DD41AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m */,
-				321F7DD51AE27324005DAEFE /* UIColor+ConvertHEX.h */,
-				321F7DD61AE27324005DAEFE /* UIColor+ConvertHEX.m */,
-				321F7DD71AE27324005DAEFE /* UIImage+ImageWithColor.h */,
-				321F7DD81AE27324005DAEFE /* UIImage+ImageWithColor.m */,
-				2C9438081B514D6B00D543A9 /* NSArray+Stations.h */,
-				2C9438091B514D6B00D543A9 /* NSArray+Stations.m */,
+				2CDA00301B526BF7003E2D27 /* UIImage+ImageWithColor */,
+				2CDA002C1B526BF1003E2D27 /* UIColor+ConvertHEX */,
+				2CDA00281B526BEB003E2D27 /* NSURLRequest+IgnoreSSL */,
+				2CDA00241B526BE4003E2D27 /* NSString+NSDateFormatter */,
+				2CDA00201B526BDD003E2D27 /* NSString+ContainsStrModernizer */,
+				2CDA001C1B526BD6003E2D27 /* NSArray+Stations */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -397,21 +564,10 @@
 		321F7DE11AE2757D005DAEFE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				321F7DE21AE2757D005DAEFE /* PricesManager.h */,
-				321F7DE31AE2757D005DAEFE /* PricesManager.m */,
-				321F7DE41AE2757D005DAEFE /* SessionManager.h */,
-				321F7DE51AE2757D005DAEFE /* SessionManager.m */,
+				2CDA00381B526C34003E2D27 /* SessionManager */,
+				2CDA00341B526C2E003E2D27 /* PricesManager */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		321F7DE81AE275EB005DAEFE /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				321F7DE91AE275EB005DAEFE /* Constants.h */,
-				321F7DEA1AE275EB005DAEFE /* Constants.m */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		321F7DF21AE27680005DAEFE /* Views */ = {
@@ -434,8 +590,7 @@
 		321F7E001AE276BE005DAEFE /* MyTickets Tab */ = {
 			isa = PBXGroup;
 			children = (
-				328D92DF1AE25B76006BDD04 /* MyTicketsController.h */,
-				328D92E01AE25B76006BDD04 /* MyTicketsController.m */,
+				2CDA00141B526B4B003E2D27 /* MyTicketsController */,
 			);
 			name = "MyTickets Tab";
 			sourceTree = "<group>";
@@ -443,8 +598,7 @@
 		321F7E011AE276D2005DAEFE /* More Tab */ = {
 			isa = PBXGroup;
 			children = (
-				328D93001AE25C80006BDD04 /* MoreController.h */,
-				328D93011AE25C80006BDD04 /* MoreController.m */,
+				2CDA00181B526B64003E2D27 /* MoreController */,
 			);
 			name = "More Tab";
 			sourceTree = "<group>";
@@ -487,8 +641,9 @@
 		321F7E2B1AE28326005DAEFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2C1D1A9E1B51C9BF0026376D /* all_stations.plist */,
-				328D92E51AE25B76006BDD04 /* Images.xcassets */,
+				2CDAFFF01B526970003E2D27 /* Images.xcassets */,
+				2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */,
+				2CDAFFE71B525FD0003E2D27 /* Property List */,
 				321F7E061AE28317005DAEFE /* Roboto Font Collection */,
 			);
 			name = Resources;
@@ -515,12 +670,10 @@
 		328D92D41AE25B76006BDD04 /* TestAPIv4 */ = {
 			isa = PBXGroup;
 			children = (
-				328D92D91AE25B76006BDD04 /* AppDelegate.h */,
-				328D92DA1AE25B76006BDD04 /* AppDelegate.m */,
+				2CDAFFF21B5269D4003E2D27 /* AppDelegate */,
 				321F7D7B1AE27257005DAEFE /* Frameworks */,
 				321F7DE11AE2757D005DAEFE /* Managers */,
 				321F7E021AE27850005DAEFE /* Models */,
-				321F7DE81AE275EB005DAEFE /* Constants */,
 				321F7DCE1AE27324005DAEFE /* Categories */,
 				321F7D731AE26968005DAEFE /* Controllers */,
 				321F7E2B1AE28326005DAEFE /* Resources */,
@@ -534,6 +687,8 @@
 		328D92D51AE25B76006BDD04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CDAFFE51B525FA3003E2D27 /* Constants.h */,
+				2CDAFFE61B525FA3003E2D27 /* PrefixHeader.pch */,
 				328D92D61AE25B76006BDD04 /* Info.plist */,
 				328D92D71AE25B76006BDD04 /* main.m */,
 			);
@@ -640,12 +795,15 @@
 				321F7E261AE28317005DAEFE /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				321F7E231AE28317005DAEFE /* Roboto-Thin.ttf in Resources */,
 				321F7E291AE28317005DAEFE /* RobotoCondensed-LightItalic.ttf in Resources */,
+				2CDAFFF11B526970003E2D27 /* Images.xcassets in Resources */,
 				321F7E201AE28317005DAEFE /* Roboto-Medium.ttf in Resources */,
 				321F7E1C1AE28317005DAEFE /* Roboto-BoldItalic.ttf in Resources */,
 				321F7E281AE28317005DAEFE /* RobotoCondensed-Light.ttf in Resources */,
 				328D92E41AE25B76006BDD04 /* Main.storyboard in Resources */,
 				321F7E1F1AE28317005DAEFE /* Roboto-LightItalic.ttf in Resources */,
 				321F7E211AE28317005DAEFE /* Roboto-MediumItalic.ttf in Resources */,
+				2CDAFFE91B526043003E2D27 /* all_stations.plist in Resources */,
+				2CDAFFEF1B5268E6003E2D27 /* Localizable.strings in Resources */,
 				321F7DFF1AE27680005DAEFE /* SchemeType40.xib in Resources */,
 				321F7E1E1AE28317005DAEFE /* Roboto-Light.ttf in Resources */,
 				321F7E2A1AE28317005DAEFE /* RobotoCondensed-Regular.ttf in Resources */,
@@ -655,8 +813,6 @@
 				321F7E241AE28317005DAEFE /* Roboto-ThinItalic.ttf in Resources */,
 				321F7DFD1AE27680005DAEFE /* RoutesCustomCell.xib in Resources */,
 				321F7E251AE28317005DAEFE /* RobotoCondensed-Bold.ttf in Resources */,
-				328D92E61AE25B76006BDD04 /* Images.xcassets in Resources */,
-				2C1D1A9F1B51C9BF0026376D /* all_stations.plist in Resources */,
 				321F7E1D1AE28317005DAEFE /* Roboto-Italic.ttf in Resources */,
 				321F7E221AE28317005DAEFE /* Roboto-Regular.ttf in Resources */,
 				321F7E1B1AE28317005DAEFE /* Roboto-Bold.ttf in Resources */,
@@ -678,55 +834,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDA00331B526BF7003E2D27 /* UIImage+ImageWithColor.m in Sources */,
 				321F7DC91AE272BB005DAEFE /* UIButton+AFNetworking.m in Sources */,
 				3202F4EC1AE52376006563FD /* AFSecurityPolicy.m in Sources */,
-				328D92E11AE25B76006BDD04 /* MyTicketsController.m in Sources */,
-				321F7DF01AE2761C005DAEFE /* SchemeController.m in Sources */,
-				321F7D771AE27241005DAEFE /* ChoiseStationController.m in Sources */,
+				2CDAFFFF1B526ACF003E2D27 /* StartController.m in Sources */,
 				321F7DFB1AE27680005DAEFE /* CustomButton.m in Sources */,
-				321F7DE61AE2757D005DAEFE /* PricesManager.m in Sources */,
+				2CDA002F1B526BF1003E2D27 /* UIColor+ConvertHEX.m in Sources */,
 				321F7DCB1AE272BB005DAEFE /* UIProgressView+AFNetworking.m in Sources */,
-				321F7DDD1AE27324005DAEFE /* UIImage+ImageWithColor.m in Sources */,
 				321F7DC01AE272BB005DAEFE /* RSDFDatePickerCollectionView.m in Sources */,
 				321F7DCC1AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m in Sources */,
 				321F7DC51AE272BB005DAEFE /* RSDFDatePickerView.m in Sources */,
-				321F7DDC1AE27324005DAEFE /* UIColor+ConvertHEX.m in Sources */,
-				328D92DB1AE25B76006BDD04 /* AppDelegate.m in Sources */,
 				321F7DFC1AE27680005DAEFE /* RoutesCustomCell.m in Sources */,
-				321F7DE01AE2743C005DAEFE /* RoutesController.m in Sources */,
+				2CDA000F1B526B1D003E2D27 /* SchemeController.m in Sources */,
 				321F7DC41AE272BB005DAEFE /* RSDFDatePickerMonthHeader.m in Sources */,
 				321F7DC61AE272BB005DAEFE /* AFNetworkActivityIndicatorManager.m in Sources */,
-				321F7DDA1AE27324005DAEFE /* NSString+NSDateFormatter.m in Sources */,
-				321F7D7A1AE2724C005DAEFE /* DateDepartureController.m in Sources */,
+				2CDA003B1B526C34003E2D27 /* SessionManager.m in Sources */,
 				321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */,
 				321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */,
-				321E4C431AE3806900A455D9 /* PreStartController.m in Sources */,
 				321F7DC81AE272BB005DAEFE /* UIAlertView+AFNetworking.m in Sources */,
-				321F7DEB1AE275EB005DAEFE /* Constants.m in Sources */,
-				321F7DD91AE27324005DAEFE /* NSString+ContainsStrModernizer.m in Sources */,
+				2CDA00131B526B2B003E2D27 /* WebViewController.m in Sources */,
 				321F7DFE1AE27680005DAEFE /* SchemeType40.m in Sources */,
-				328D92DE1AE25B76006BDD04 /* StartController.m in Sources */,
+				2CDA002B1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m in Sources */,
+				2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */,
 				328D92D81AE25B76006BDD04 /* main.m in Sources */,
-				2C94380A1B514D6B00D543A9 /* NSArray+Stations.m in Sources */,
 				321F7DC31AE272BB005DAEFE /* RSDFDatePickerDaysOfWeekView.m in Sources */,
-				321F7DE71AE2757D005DAEFE /* SessionManager.m in Sources */,
 				3202F4EE1AE52376006563FD /* AFURLRequestSerialization.m in Sources */,
-				328D93021AE25C80006BDD04 /* MoreController.m in Sources */,
+				2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */,
+				2CDA001F1B526BD6003E2D27 /* NSArray+Stations.m in Sources */,
+				2CDA001B1B526B64003E2D27 /* MoreController.m in Sources */,
 				321F7DCA1AE272BB005DAEFE /* UIImageView+AFNetworking.m in Sources */,
 				3202F4E91AE52376006563FD /* AFHTTPRequestOperationManager.m in Sources */,
+				2CDA00171B526B4B003E2D27 /* MyTicketsController.m in Sources */,
 				321F7DCD1AE272BB005DAEFE /* UIWebView+AFNetworking.m in Sources */,
-				321F7DF11AE2761C005DAEFE /* WebViewController.m in Sources */,
+				2CDA00371B526C2E003E2D27 /* PricesManager.m in Sources */,
+				2CDA00231B526BDD003E2D27 /* NSString+ContainsStrModernizer.m in Sources */,
 				3202F4ED1AE52376006563FD /* AFURLConnectionOperation.m in Sources */,
 				3202F4F01AE52376006563FD /* AFURLSessionManager.m in Sources */,
 				3202F4E81AE52376006563FD /* AFHTTPRequestOperation.m in Sources */,
 				321F7E051AE27850005DAEFE /* Route.m in Sources */,
 				321F7DC21AE272BB005DAEFE /* RSDFDatePickerDayCell.m in Sources */,
-				321F7DDB1AE27324005DAEFE /* NSURLRequest+IgnoreSSL.m in Sources */,
+				2CDA000B1B526B0B003E2D27 /* RoutesController.m in Sources */,
 				321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */,
+				2CDAFFF51B5269D4003E2D27 /* AppDelegate.m in Sources */,
 				3202F4EA1AE52376006563FD /* AFHTTPSessionManager.m in Sources */,
 				321F7DC71AE272BB005DAEFE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				2CDA00271B526BE4003E2D27 /* NSString+NSDateFormatter.m in Sources */,
 				3202F4EB1AE52376006563FD /* AFNetworkReachabilityManager.m in Sources */,
 				3202F4EF1AE52376006563FD /* AFURLResponseSerialization.m in Sources */,
+				2CDAFFFB1B526ABE003E2D27 /* PreStartController.m in Sources */,
 				321F7DC11AE272BB005DAEFE /* RSDFDatePickerCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,6 +1008,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = TestAPIv4/SupportingFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = TestAPIv4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -864,6 +1020,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = TestAPIv4/SupportingFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = TestAPIv4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
