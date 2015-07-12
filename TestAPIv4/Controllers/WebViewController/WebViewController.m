@@ -7,8 +7,6 @@
 //
 
 #import "WebViewController.h"
-#import "NSURLRequest+IgnoreSSL.h"
-#import "NSString+ContainsStrModernizer.h"
 
 @interface WebViewController () 
 

@@ -20,6 +20,7 @@
 
 @interface ChoiseStationController : UITableViewController
 
-@property (nonatomic, strong) id <ChoiseStationControllerDelegate> delegate;
+@property (strong, nonatomic) NSString *navigationItemTitle;
+@property (strong, nonatomic) id <ChoiseStationControllerDelegate> delegate;
 
 @end

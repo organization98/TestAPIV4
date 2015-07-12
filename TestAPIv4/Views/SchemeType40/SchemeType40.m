@@ -9,19 +9,13 @@
 #import "SchemeType40.h"
 #import "CustomButton.h"
 
-@implementation SchemeType40 {
+@implementation SchemeType40
+{
     NSMutableArray *array;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // code
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Load the interface file from .xib
@@ -56,7 +50,6 @@
             
             [self.viewScheme addSubview:btn];
             place++;
-//            continue;
         }
     }
     return self;

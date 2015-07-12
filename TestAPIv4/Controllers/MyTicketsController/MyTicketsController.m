@@ -7,7 +7,6 @@
 //
 
 #import "MyTicketsController.h"
-#import "Constants.h"
 
 @interface MyTicketsController ()
 
@@ -15,14 +14,10 @@
 
 @implementation MyTicketsController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.view.backgroundColor = MintColor;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

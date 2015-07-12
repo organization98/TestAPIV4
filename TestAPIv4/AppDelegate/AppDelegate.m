@@ -15,7 +15,8 @@
     // изменение цвета NavigationBar и цвета шрифта кнопок
     [[UINavigationBar appearance] setBarTintColor:MintColor];
     [[UINavigationBar appearance] setTintColor:WhiteColor];
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: WhiteColor, NSForegroundColorAttributeName, nil]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont appFontWithSize:18.f],
+                                                           NSForegroundColorAttributeName : WhiteColor}];
     
     [[UISearchBar appearance] setTintColor:MintColor];
     [[UISearchBar appearance] setBarTintColor:MintColor];
@@ -30,6 +31,9 @@
     
     // изменение стиля StatusBar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // tableView
+    
     
     return YES;
 }

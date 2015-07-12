@@ -25,6 +25,7 @@
 #import "UIColor+ConvertHEX.h"
 #import "UIImage+ImageWithColor.h"
 #import "NSArray+Stations.h"
+#import "UIFont+AppFont.h"
 
 // frameworks
 #import "AFNetworking.h"

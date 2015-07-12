@@ -7,7 +7,6 @@
 //
 
 #import "SchemeController.h"
-#import "Constants.h"
 #import "WebViewController.h"
 #import "SchemeType40.h"
 

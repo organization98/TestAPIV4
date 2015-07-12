@@ -10,6 +10,4 @@
 
 @interface MyTicketsController : UIViewController
 
-
 @end
-

@@ -7,9 +7,6 @@
 //
 
 #import "DateDepartureController.h"
-#import "Constants.h"
-
-#import "RSDFDatePickerView.h"
 
 @interface DateDepartureController () <RSDFDatePickerViewDelegate, RSDFDatePickerViewDataSource>
 

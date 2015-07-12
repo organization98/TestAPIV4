@@ -10,7 +10,8 @@
 
 @implementation SplashSegue
 
-- (void)perform {
+- (void)perform
+{
     // Параметр animated:NO, т.к. анимацию перехода мы выполнили в PreStartController
     [[self sourceViewController] presentModalViewController:[self destinationViewController] animated:NO];
 }

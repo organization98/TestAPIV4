@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0CC6AF1B52CDBE00A06E1B /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */; };
 		2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */; };
 		2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00061B526AF6003E2D27 /* DateDepartureController.m */; };
 		2CDA000B1B526B0B003E2D27 /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA000A1B526B0B003E2D27 /* RoutesController.m */; };
@@ -28,6 +29,12 @@
 		2CDAFFF51B5269D4003E2D27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFF41B5269D4003E2D27 /* AppDelegate.m */; };
 		2CDAFFFB1B526ABE003E2D27 /* PreStartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFFA1B526ABE003E2D27 /* PreStartController.m */; };
 		2CDAFFFF1B526ACF003E2D27 /* StartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFFE1B526ACF003E2D27 /* StartController.m */; };
+		2CE045D91B527BFD00DBC8A3 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE045D81B527BFD00DBC8A3 /* CustomButton.m */; };
+		2CE045DE1B527C0500DBC8A3 /* RoutesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE045DC1B527C0500DBC8A3 /* RoutesCustomCell.m */; };
+		2CE045DF1B527C0500DBC8A3 /* RoutesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE045DD1B527C0500DBC8A3 /* RoutesCustomCell.xib */; };
+		2CE045E41B527C0B00DBC8A3 /* SchemeType40.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE045E21B527C0B00DBC8A3 /* SchemeType40.m */; };
+		2CE045E51B527C0B00DBC8A3 /* SchemeType40.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE045E31B527C0B00DBC8A3 /* SchemeType40.xib */; };
+		2CE045E91B527C1300DBC8A3 /* SplashSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE045E81B527C1300DBC8A3 /* SplashSegue.m */; };
 		3202F4E81AE52376006563FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */; };
 		3202F4E91AE52376006563FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D81AE52376006563FD /* AFHTTPRequestOperationManager.m */; };
 		3202F4EA1AE52376006563FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4DA1AE52376006563FD /* AFHTTPSessionManager.m */; };
@@ -37,7 +44,6 @@
 		3202F4EE1AE52376006563FD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E31AE52376006563FD /* AFURLRequestSerialization.m */; };
 		3202F4EF1AE52376006563FD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E51AE52376006563FD /* AFURLResponseSerialization.m */; };
 		3202F4F01AE52376006563FD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4E71AE52376006563FD /* AFURLSessionManager.m */; };
-		321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 321E4C451AE3854600A455D9 /* SplashSegue.m */; };
 		321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D921AE272BB005DAEFE /* DejalActivityView.m */; };
 		321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D951AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m */; };
 		321F7DC01AE272BB005DAEFE /* RSDFDatePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7D981AE272BB005DAEFE /* RSDFDatePickerCollectionView.m */; };
@@ -54,11 +60,6 @@
 		321F7DCB1AE272BB005DAEFE /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB01AE272BB005DAEFE /* UIProgressView+AFNetworking.m */; };
 		321F7DCC1AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB21AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m */; };
 		321F7DCD1AE272BB005DAEFE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DB41AE272BB005DAEFE /* UIWebView+AFNetworking.m */; };
-		321F7DFB1AE27680005DAEFE /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DF41AE27680005DAEFE /* CustomButton.m */; };
-		321F7DFC1AE27680005DAEFE /* RoutesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DF61AE27680005DAEFE /* RoutesCustomCell.m */; };
-		321F7DFD1AE27680005DAEFE /* RoutesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321F7DF71AE27680005DAEFE /* RoutesCustomCell.xib */; };
-		321F7DFE1AE27680005DAEFE /* SchemeType40.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7DF91AE27680005DAEFE /* SchemeType40.m */; };
-		321F7DFF1AE27680005DAEFE /* SchemeType40.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321F7DFA1AE27680005DAEFE /* SchemeType40.xib */; };
 		321F7E051AE27850005DAEFE /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F7E041AE27850005DAEFE /* Route.m */; };
 		321F7E191AE28317005DAEFE /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321F7E071AE28317005DAEFE /* Roboto-Black.ttf */; };
 		321F7E1A1AE28317005DAEFE /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321F7E081AE28317005DAEFE /* Roboto-BlackItalic.ttf */; };
@@ -95,6 +96,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0CC6AD1B52CDBE00A06E1B /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
+		2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
 		2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
 		2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
 		2CDA00051B526AF6003E2D27 /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
@@ -136,6 +139,16 @@
 		2CDAFFFA1B526ABE003E2D27 /* PreStartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartController.m; sourceTree = "<group>"; };
 		2CDAFFFD1B526ACF003E2D27 /* StartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartController.h; sourceTree = "<group>"; };
 		2CDAFFFE1B526ACF003E2D27 /* StartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartController.m; sourceTree = "<group>"; };
+		2CE045D71B527BFD00DBC8A3 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		2CE045D81B527BFD00DBC8A3 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		2CE045DB1B527C0500DBC8A3 /* RoutesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesCustomCell.h; sourceTree = "<group>"; };
+		2CE045DC1B527C0500DBC8A3 /* RoutesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesCustomCell.m; sourceTree = "<group>"; };
+		2CE045DD1B527C0500DBC8A3 /* RoutesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesCustomCell.xib; sourceTree = "<group>"; };
+		2CE045E11B527C0B00DBC8A3 /* SchemeType40.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeType40.h; sourceTree = "<group>"; };
+		2CE045E21B527C0B00DBC8A3 /* SchemeType40.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeType40.m; sourceTree = "<group>"; };
+		2CE045E31B527C0B00DBC8A3 /* SchemeType40.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemeType40.xib; sourceTree = "<group>"; };
+		2CE045E71B527C1300DBC8A3 /* SplashSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashSegue.h; sourceTree = "<group>"; };
+		2CE045E81B527C1300DBC8A3 /* SplashSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashSegue.m; sourceTree = "<group>"; };
 		3202F4D51AE52376006563FD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3202F4D71AE52376006563FD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -155,8 +168,6 @@
 		3202F4E51AE52376006563FD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		3202F4E61AE52376006563FD /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		3202F4E71AE52376006563FD /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		321E4C441AE3854600A455D9 /* SplashSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashSegue.h; sourceTree = "<group>"; };
-		321E4C451AE3854600A455D9 /* SplashSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashSegue.m; sourceTree = "<group>"; };
 		321F7D911AE272BB005DAEFE /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		321F7D921AE272BB005DAEFE /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		321F7D941AE272BB005DAEFE /* NSCalendar+RSDFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+RSDFAdditions.h"; sourceTree = "<group>"; };
@@ -191,14 +202,6 @@
 		321F7DB21AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		321F7DB31AE272BB005DAEFE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		321F7DB41AE272BB005DAEFE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		321F7DF31AE27680005DAEFE /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		321F7DF41AE27680005DAEFE /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		321F7DF51AE27680005DAEFE /* RoutesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesCustomCell.h; sourceTree = "<group>"; };
-		321F7DF61AE27680005DAEFE /* RoutesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesCustomCell.m; sourceTree = "<group>"; };
-		321F7DF71AE27680005DAEFE /* RoutesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesCustomCell.xib; sourceTree = "<group>"; };
-		321F7DF81AE27680005DAEFE /* SchemeType40.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeType40.h; sourceTree = "<group>"; };
-		321F7DF91AE27680005DAEFE /* SchemeType40.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeType40.m; sourceTree = "<group>"; };
-		321F7DFA1AE27680005DAEFE /* SchemeType40.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemeType40.xib; sourceTree = "<group>"; };
 		321F7E031AE27850005DAEFE /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		321F7E041AE27850005DAEFE /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		321F7E071AE28317005DAEFE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -247,6 +250,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0CC6AC1B52CDBE00A06E1B /* UIFont+AppFont */ = {
+			isa = PBXGroup;
+			children = (
+				2C0CC6AD1B52CDBE00A06E1B /* UIFont+AppFont.h */,
+				2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */,
+			);
+			path = "UIFont+AppFont";
+			sourceTree = "<group>";
+		};
 		2CDA00001B526AE2003E2D27 /* ChoiseStationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +438,44 @@
 			path = Controllers/StartController;
 			sourceTree = "<group>";
 		};
+		2CE045D61B527BFD00DBC8A3 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				2CE045D71B527BFD00DBC8A3 /* CustomButton.h */,
+				2CE045D81B527BFD00DBC8A3 /* CustomButton.m */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		2CE045DA1B527C0500DBC8A3 /* RoutesCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CE045DB1B527C0500DBC8A3 /* RoutesCustomCell.h */,
+				2CE045DC1B527C0500DBC8A3 /* RoutesCustomCell.m */,
+				2CE045DD1B527C0500DBC8A3 /* RoutesCustomCell.xib */,
+			);
+			path = RoutesCustomCell;
+			sourceTree = "<group>";
+		};
+		2CE045E01B527C0B00DBC8A3 /* SchemeType40 */ = {
+			isa = PBXGroup;
+			children = (
+				2CE045E11B527C0B00DBC8A3 /* SchemeType40.h */,
+				2CE045E21B527C0B00DBC8A3 /* SchemeType40.m */,
+				2CE045E31B527C0B00DBC8A3 /* SchemeType40.xib */,
+			);
+			path = SchemeType40;
+			sourceTree = "<group>";
+		};
+		2CE045E61B527C1300DBC8A3 /* SplashSegue */ = {
+			isa = PBXGroup;
+			children = (
+				2CE045E71B527C1300DBC8A3 /* SplashSegue.h */,
+				2CE045E81B527C1300DBC8A3 /* SplashSegue.m */,
+			);
+			path = SplashSegue;
+			sourceTree = "<group>";
+		};
 		3202F4D41AE52376006563FD /* AFNetworking 2.5.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,7 +523,6 @@
 				2CDA00081B526B0B003E2D27 /* RoutesController */,
 				2CDA000C1B526B1D003E2D27 /* SchemeController */,
 				2CDA00101B526B2B003E2D27 /* WebViewController */,
-				321F7DF21AE27680005DAEFE /* Views */,
 			);
 			name = "BuyTickets Tab";
 			sourceTree = "<group>";
@@ -551,6 +600,7 @@
 		321F7DCE1AE27324005DAEFE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				2C0CC6AC1B52CDBE00A06E1B /* UIFont+AppFont */,
 				2CDA00301B526BF7003E2D27 /* UIImage+ImageWithColor */,
 				2CDA002C1B526BF1003E2D27 /* UIColor+ConvertHEX */,
 				2CDA00281B526BEB003E2D27 /* NSURLRequest+IgnoreSSL */,
@@ -573,16 +623,10 @@
 		321F7DF21AE27680005DAEFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				321F7DF31AE27680005DAEFE /* CustomButton.h */,
-				321F7DF41AE27680005DAEFE /* CustomButton.m */,
-				321F7DF51AE27680005DAEFE /* RoutesCustomCell.h */,
-				321F7DF61AE27680005DAEFE /* RoutesCustomCell.m */,
-				321F7DF71AE27680005DAEFE /* RoutesCustomCell.xib */,
-				321F7DF81AE27680005DAEFE /* SchemeType40.h */,
-				321F7DF91AE27680005DAEFE /* SchemeType40.m */,
-				321F7DFA1AE27680005DAEFE /* SchemeType40.xib */,
-				321E4C441AE3854600A455D9 /* SplashSegue.h */,
-				321E4C451AE3854600A455D9 /* SplashSegue.m */,
+				2CE045E61B527C1300DBC8A3 /* SplashSegue */,
+				2CE045E01B527C0B00DBC8A3 /* SchemeType40 */,
+				2CE045DA1B527C0500DBC8A3 /* RoutesCustomCell */,
+				2CE045D61B527BFD00DBC8A3 /* CustomButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -676,6 +720,7 @@
 				321F7E021AE27850005DAEFE /* Models */,
 				321F7DCE1AE27324005DAEFE /* Categories */,
 				321F7D731AE26968005DAEFE /* Controllers */,
+				321F7DF21AE27680005DAEFE /* Views */,
 				321F7E2B1AE28326005DAEFE /* Resources */,
 				328D92E21AE25B76006BDD04 /* Main.storyboard */,
 				328D92E71AE25B76006BDD04 /* LaunchScreen.xib */,
@@ -797,21 +842,21 @@
 				321F7E291AE28317005DAEFE /* RobotoCondensed-LightItalic.ttf in Resources */,
 				2CDAFFF11B526970003E2D27 /* Images.xcassets in Resources */,
 				321F7E201AE28317005DAEFE /* Roboto-Medium.ttf in Resources */,
+				2CE045E51B527C0B00DBC8A3 /* SchemeType40.xib in Resources */,
 				321F7E1C1AE28317005DAEFE /* Roboto-BoldItalic.ttf in Resources */,
+				2CE045DF1B527C0500DBC8A3 /* RoutesCustomCell.xib in Resources */,
 				321F7E281AE28317005DAEFE /* RobotoCondensed-Light.ttf in Resources */,
 				328D92E41AE25B76006BDD04 /* Main.storyboard in Resources */,
 				321F7E1F1AE28317005DAEFE /* Roboto-LightItalic.ttf in Resources */,
 				321F7E211AE28317005DAEFE /* Roboto-MediumItalic.ttf in Resources */,
 				2CDAFFE91B526043003E2D27 /* all_stations.plist in Resources */,
 				2CDAFFEF1B5268E6003E2D27 /* Localizable.strings in Resources */,
-				321F7DFF1AE27680005DAEFE /* SchemeType40.xib in Resources */,
 				321F7E1E1AE28317005DAEFE /* Roboto-Light.ttf in Resources */,
 				321F7E2A1AE28317005DAEFE /* RobotoCondensed-Regular.ttf in Resources */,
 				321F7E271AE28317005DAEFE /* RobotoCondensed-Italic.ttf in Resources */,
 				328D92E91AE25B76006BDD04 /* LaunchScreen.xib in Resources */,
 				321F7E1A1AE28317005DAEFE /* Roboto-BlackItalic.ttf in Resources */,
 				321F7E241AE28317005DAEFE /* Roboto-ThinItalic.ttf in Resources */,
-				321F7DFD1AE27680005DAEFE /* RoutesCustomCell.xib in Resources */,
 				321F7E251AE28317005DAEFE /* RobotoCondensed-Bold.ttf in Resources */,
 				321F7E1D1AE28317005DAEFE /* Roboto-Italic.ttf in Resources */,
 				321F7E221AE28317005DAEFE /* Roboto-Regular.ttf in Resources */,
@@ -838,22 +883,23 @@
 				321F7DC91AE272BB005DAEFE /* UIButton+AFNetworking.m in Sources */,
 				3202F4EC1AE52376006563FD /* AFSecurityPolicy.m in Sources */,
 				2CDAFFFF1B526ACF003E2D27 /* StartController.m in Sources */,
-				321F7DFB1AE27680005DAEFE /* CustomButton.m in Sources */,
 				2CDA002F1B526BF1003E2D27 /* UIColor+ConvertHEX.m in Sources */,
 				321F7DCB1AE272BB005DAEFE /* UIProgressView+AFNetworking.m in Sources */,
 				321F7DC01AE272BB005DAEFE /* RSDFDatePickerCollectionView.m in Sources */,
+				2C0CC6AF1B52CDBE00A06E1B /* UIFont+AppFont.m in Sources */,
 				321F7DCC1AE272BB005DAEFE /* UIRefreshControl+AFNetworking.m in Sources */,
 				321F7DC51AE272BB005DAEFE /* RSDFDatePickerView.m in Sources */,
-				321F7DFC1AE27680005DAEFE /* RoutesCustomCell.m in Sources */,
+				2CE045E91B527C1300DBC8A3 /* SplashSegue.m in Sources */,
 				2CDA000F1B526B1D003E2D27 /* SchemeController.m in Sources */,
 				321F7DC41AE272BB005DAEFE /* RSDFDatePickerMonthHeader.m in Sources */,
+				2CE045DE1B527C0500DBC8A3 /* RoutesCustomCell.m in Sources */,
 				321F7DC61AE272BB005DAEFE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2CDA003B1B526C34003E2D27 /* SessionManager.m in Sources */,
 				321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */,
 				321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */,
 				321F7DC81AE272BB005DAEFE /* UIAlertView+AFNetworking.m in Sources */,
 				2CDA00131B526B2B003E2D27 /* WebViewController.m in Sources */,
-				321F7DFE1AE27680005DAEFE /* SchemeType40.m in Sources */,
+				2CE045E41B527C0B00DBC8A3 /* SchemeType40.m in Sources */,
 				2CDA002B1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m in Sources */,
 				2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */,
 				328D92D81AE25B76006BDD04 /* main.m in Sources */,
@@ -870,11 +916,11 @@
 				2CDA00231B526BDD003E2D27 /* NSString+ContainsStrModernizer.m in Sources */,
 				3202F4ED1AE52376006563FD /* AFURLConnectionOperation.m in Sources */,
 				3202F4F01AE52376006563FD /* AFURLSessionManager.m in Sources */,
+				2CE045D91B527BFD00DBC8A3 /* CustomButton.m in Sources */,
 				3202F4E81AE52376006563FD /* AFHTTPRequestOperation.m in Sources */,
 				321F7E051AE27850005DAEFE /* Route.m in Sources */,
 				321F7DC21AE272BB005DAEFE /* RSDFDatePickerDayCell.m in Sources */,
 				2CDA000B1B526B0B003E2D27 /* RoutesController.m in Sources */,
-				321E4C461AE3854600A455D9 /* SplashSegue.m in Sources */,
 				2CDAFFF51B5269D4003E2D27 /* AppDelegate.m in Sources */,
 				3202F4EA1AE52376006563FD /* AFHTTPSessionManager.m in Sources */,
 				321F7DC71AE272BB005DAEFE /* UIActivityIndicatorView+AFNetworking.m in Sources */,

@@ -7,11 +7,11 @@
 //
 
 #import "RoutesCustomCell.h"
-#import "DejalActivityView.h"
 
 @implementation RoutesCustomCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
@@ -19,16 +19,19 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
     [super setSelected:selected animated:animated];
     // Configure the view for the selected state
 }
 
-- (void)updatePrice:(NSNotification *)notification {
+- (void)updatePrice:(NSNotification *)notification
+{
     [self addPriceToLabel:notification.userInfo];
 }
 
-- (void)addPriceToLabel:(NSDictionary *)dict {
+- (void)addPriceToLabel:(NSDictionary *)dict
+{
     if ([[dict objectForKey:self.wagonType] objectForKey:@"cost"]) {
         self.activityView.hidden = YES;
         self.labelCost = [[UILabel alloc] initWithFrame:CGRectMake(20, 171, 60, 21)];

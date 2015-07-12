@@ -8,13 +8,7 @@
 
 #import "RoutesController.h"
 #import "RoutesCustomCell.h"
-#import "SessionManager.h"
-#import "PricesManager.h"
-#import "DejalActivityView.h"
 #import "SchemeController.h"
-#import "NSString+NSDateFormatter.h"
-#import "Constants.h"
-
 #import "StartController.h"
 
 @interface RoutesController () <UITableViewDataSource, UITableViewDelegate>

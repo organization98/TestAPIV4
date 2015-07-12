@@ -29,7 +29,7 @@ static NSString *const cellIdentifier = @"Cell";
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.dimsBackgroundDuringPresentation = YES;
     
     self.searchController.searchBar.delegate = self;
     self.tableView.tableHeaderView = self.searchController.searchBar;
@@ -50,7 +50,7 @@ static NSString *const cellIdentifier = @"Cell";
     
     self.searchDisplayController.delegate = self;
     
-    self.navigationItem.title = NSStringFromClass([self class]);
+    self.navigationItem.title = self.navigationItemTitle;
 }
 
 #pragma mark - UITableViewDataSource
@@ -67,16 +67,29 @@ static NSString *const cellIdentifier = @"Cell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     cell.textLabel.text = [[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString];
+    cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-orange"]];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     // Получить название станции и ее код
     [self.delegate setStationName:[[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString] andCode:[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationCode]];
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (IOS8_AND_LETER) {
+        cell.preservesSuperviewLayoutMargins = NO;
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    // iOS 7 and later
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)])
+        [cell setSeparatorInset:UIEdgeInsetsZero];
 }
 
 #pragma mark - UISearchDisplayController delegate methods
@@ -92,7 +105,7 @@ static NSString *const cellIdentifier = @"Cell";
 {
     NSString *searchString = searchController.searchBar.text;
     
-    if([searchString length] <= 0 ) {
+    if([searchString length] <= 0) {
         [self.tableView reloadData];
         return;
     }

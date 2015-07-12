@@ -11,7 +11,6 @@
 @interface RoutesCustomCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *activityView;
-
 @property (strong, nonatomic)  UILabel *labelCost;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelRouteTitle;

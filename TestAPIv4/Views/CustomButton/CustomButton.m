@@ -14,8 +14,8 @@
     NSString *orientation;
 }
 
-+ (CustomButton *)buttonWithNumber:(NSString *)number with:(CGRect)rect and:(NSString *)orientation {
-    
++ (CustomButton *)buttonWithNumber:(NSString *)number with:(CGRect)rect and:(NSString *)orientation
+{
     // создаем кнопку, задаем Title для кнопки
     CustomButton *btn = [[CustomButton alloc] init];
     btn.layer.cornerRadius = 5;
@@ -29,7 +29,8 @@
     return btn;
 }
 
-- (id)init {
+- (id)init
+{
     self = [super init];
     if (self) {
         
@@ -53,7 +54,8 @@
     return self;
 }
 
-- (void)selectedPlaces {
+- (void)selectedPlaces
+{
     if (isSelected == NO) {
         isSelected = YES;
         [self setSelected:YES];
@@ -61,9 +63,7 @@
         isSelected = NO;
         [self setSelected:NO];
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedPlace"
-                                                        object:self
-                                                      userInfo:@{@"number":@"4"}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedPlace" object:self userInfo:@{@"number":@"4"}];
 }
 
 @end

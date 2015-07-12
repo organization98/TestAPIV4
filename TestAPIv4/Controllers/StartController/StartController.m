@@ -7,11 +7,6 @@
 //
 
 #import "StartController.h"
-#import "Constants.h"
-
-// categories
-#import "NSString+NSDateFormatter.h"
-#import "UIImage+ImageWithColor.h"
 
 // controllers
 #import "ChoiseStationController.h"
@@ -97,7 +92,7 @@
     [self.buttonFindTickets setTitleColor:MintColor forState:UIControlStateNormal];
     [self.buttonFindTickets setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     [self.buttonFindTickets setTitle:@"Найти билеты" forState:UIControlStateNormal];
-    [self.buttonFindTickets.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:17.f]];
+    [self.buttonFindTickets.titleLabel setFont:[UIFont appFontWithSize:17.f]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -159,10 +154,12 @@
         controller.delegate = self;
     } else if ([segue.identifier isEqualToString:@"showFromStation"]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
+        controller.navigationItemTitle = @"Откуда";
         controller.delegate = self;
         self.direction = @"from";
     } else if ([segue.identifier isEqualToString:@"showToStation"]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
+        controller.navigationItemTitle = @"Куда";
         controller.delegate = self;
         self.direction = @"to";
     } else if ([segue.identifier isEqualToString:@"tabSegue"]) {

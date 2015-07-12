@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TestAPIv4.xcodeproj">
+      location = "self:/Users/Dmitriy/Developer/Repositories/Organization_98/TestAPIV4/TestAPIv4.xcodeproj">
    </FileRef>
 </Workspace>
