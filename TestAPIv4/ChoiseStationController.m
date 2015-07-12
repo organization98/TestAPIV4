@@ -10,13 +10,24 @@
 #import "StartController.h"
 //#import "Route.h"
 #import "Constants.h"
+#import "SessionManager.h"
+#import "NSArray+Stations.h"
 
-@interface ChoiseStationController () <UITextFieldDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
+@interface ChoiseStationController () <UITextFieldDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating>
 
 @property (weak, nonatomic) IBOutlet UISearchController *searchField;
 @property (strong, nonatomic) NSArray *stations;
 
+@property (strong, nonatomic) UISearchController *searchController;
+
 @end
+
+static NSString *const kStationCode = @"code";
+static NSString *const kStationNameLT = @"name_lt";
+static NSString *const kStationNameUK = @"name_uk";
+static NSString *const kStationNameRU = @"name_ru";
+
+static NSString *const cellIdentifier = @"Cell";
 
 @implementation ChoiseStationController
 
@@ -25,6 +36,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    self.searchController.searchBar.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    
+    [self.searchController.searchBar sizeToFit];
     
     // Above ios 8.0
 //    float os_version = [[[UIDevice currentDevice] systemVersion] floatValue];
@@ -61,15 +82,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
-    NSDictionary *dict = [self.stations objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dict objectForKey:@"name"];
-    
+    cell.textLabel.text = [[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString];
     return cell;
 }
 
@@ -77,26 +94,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Получить название станции и ее код
-    [self.delegate setStationName:[[self.stations objectAtIndex:indexPath.row] objectForKey:@"name"]
-                          andCode:[[self.stations objectAtIndex:indexPath.row] objectForKey:@"code"]];
+    [self.delegate setStationName:[[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString] andCode:[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationCode]];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UISearchDisplayController delegate methods
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
 {
-    NSLog(@"%@", searchText);
+    [self updateSearchResultsForSearchController:self.searchController];
+}
+
+#pragma mark - UISearchResultsUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    NSString *searchString = searchController.searchBar.text;
     
-    [self initializeTable];
-    
-    if([searchText length] <= 0 ) {
+    if([searchString length] <= 0 ) {
         [self.tableView reloadData];
         return;
     }
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains [cd] %@", searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains [cd] %@", searchString];
     self.stations = [self.stations filteredArrayUsingPredicate:predicate];
     [self.tableView reloadData];
 }
@@ -105,12 +126,8 @@
 
 - (void)initializeTable
 {
-    self.stations = [NSArray array];
-    self.stations = @[
-                      @{@"name" : @"Donetsk",             @"code" : @"2210700"},
-                      @{@"name" : @"Dnepropetrovsk",      @"code" : @"2200001"},
-                      @{@"name" : @"Dneprodzerzhinsk",    @"code" : @"2200003"}
-                      ];
+    self.stations = [[NSArray alloc] init];
+    self.stations = [NSArray stationsArray];
 }
 
 @end

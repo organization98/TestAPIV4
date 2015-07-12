@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D1A9F1B51C9BF0026376D /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D1A9E1B51C9BF0026376D /* all_stations.plist */; };
+		2C94380A1B514D6B00D543A9 /* NSArray+Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9438091B514D6B00D543A9 /* NSArray+Stations.m */; };
 		3202F4E81AE52376006563FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */; };
 		3202F4E91AE52376006563FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4D81AE52376006563FD /* AFHTTPRequestOperationManager.m */; };
 		3202F4EA1AE52376006563FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202F4DA1AE52376006563FD /* AFHTTPSessionManager.m */; };
@@ -93,6 +95,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1D1A9E1B51C9BF0026376D /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = all_stations.plist; sourceTree = "<group>"; };
+		2C9438081B514D6B00D543A9 /* NSArray+Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Stations.h"; sourceTree = "<group>"; };
+		2C9438091B514D6B00D543A9 /* NSArray+Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Stations.m"; sourceTree = "<group>"; };
 		3202F4D51AE52376006563FD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3202F4D61AE52376006563FD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		3202F4D71AE52376006563FD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -383,6 +388,8 @@
 				321F7DD61AE27324005DAEFE /* UIColor+ConvertHEX.m */,
 				321F7DD71AE27324005DAEFE /* UIImage+ImageWithColor.h */,
 				321F7DD81AE27324005DAEFE /* UIImage+ImageWithColor.m */,
+				2C9438081B514D6B00D543A9 /* NSArray+Stations.h */,
+				2C9438091B514D6B00D543A9 /* NSArray+Stations.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -480,6 +487,7 @@
 		321F7E2B1AE28326005DAEFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C1D1A9E1B51C9BF0026376D /* all_stations.plist */,
 				328D92E51AE25B76006BDD04 /* Images.xcassets */,
 				321F7E061AE28317005DAEFE /* Roboto Font Collection */,
 			);
@@ -648,6 +656,7 @@
 				321F7DFD1AE27680005DAEFE /* RoutesCustomCell.xib in Resources */,
 				321F7E251AE28317005DAEFE /* RobotoCondensed-Bold.ttf in Resources */,
 				328D92E61AE25B76006BDD04 /* Images.xcassets in Resources */,
+				2C1D1A9F1B51C9BF0026376D /* all_stations.plist in Resources */,
 				321F7E1D1AE28317005DAEFE /* Roboto-Italic.ttf in Resources */,
 				321F7E221AE28317005DAEFE /* Roboto-Regular.ttf in Resources */,
 				321F7E1B1AE28317005DAEFE /* Roboto-Bold.ttf in Resources */,
@@ -698,6 +707,7 @@
 				321F7DFE1AE27680005DAEFE /* SchemeType40.m in Sources */,
 				328D92DE1AE25B76006BDD04 /* StartController.m in Sources */,
 				328D92D81AE25B76006BDD04 /* main.m in Sources */,
+				2C94380A1B514D6B00D543A9 /* NSArray+Stations.m in Sources */,
 				321F7DC31AE272BB005DAEFE /* RSDFDatePickerDaysOfWeekView.m in Sources */,
 				321F7DE71AE2757D005DAEFE /* SessionManager.m in Sources */,
 				3202F4EE1AE52376006563FD /* AFURLRequestSerialization.m in Sources */,

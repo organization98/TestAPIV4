@@ -106,6 +106,19 @@
     }];
 }
 
+#warning temp method
+- (void)getStationsBlock:(NetworkBlock)block
+{
+    NSURL *requestURL = [NSURL URLWithString:@"http://booking.ibp.org.ua/api/stationsall"];
+    [self requestFromURL:requestURL completion:^(BOOL succes, id data, NSError *error) {
+        if (succes == NO) {
+            NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
+        } else {
+            block (succes, data, error);
+        }
+    }];
+}
+
 - (NSDictionary *)getPlaces:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls {
     return [NSDictionary new];
 }
