@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 //#import "Route.h"
 
-@interface RoutesController : UIViewController
+@interface RoutesController : UITableViewController
 
 @property (strong, nonatomic) NSString *stationFrom;
 @property (strong, nonatomic) NSString *stationTo;
 @property (strong, nonatomic) NSString *startDate;
+
+@property (strong, nonatomic) NSString *navigationItemTitle;
 
 @property (strong, nonatomic) NSString *number;
 @property (strong, nonatomic) NSString *wagonNumber;

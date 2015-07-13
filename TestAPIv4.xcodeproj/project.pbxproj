@@ -262,6 +262,15 @@
 			path = "UIFont+AppFont";
 			sourceTree = "<group>";
 		};
+		2CD667BE1B543E1200C945C1 /* NSDate+AddDay */ = {
+			isa = PBXGroup;
+			children = (
+				2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */,
+				2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */,
+			);
+			name = "NSDate+AddDay";
+			sourceTree = "<group>";
+		};
 		2CDA00001B526AE2003E2D27 /* ChoiseStationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,8 +619,7 @@
 				2CDA00241B526BE4003E2D27 /* NSString+NSDateFormatter */,
 				2CDA00201B526BDD003E2D27 /* NSString+ContainsStrModernizer */,
 				2CDA001C1B526BD6003E2D27 /* NSArray+Stations */,
-				2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */,
-				2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */,
+				2CD667BE1B543E1200C945C1 /* NSDate+AddDay */,
 			);
 			path = Categories;
 			sourceTree = "<group>";

@@ -96,7 +96,7 @@
                                     <segue destination="3UD-DV-UAv" kind="push" identifier="showDateDeparture" id="RoO-P3-Oe4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoZ-0f-mYQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoZ-0f-mYQ" userLabel="findTickets">
                                 <rect key="frame" x="20" y="421" width="280" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="tei-Os-8TI"/>
@@ -104,6 +104,9 @@
                                 <state key="normal" title="find">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Iyx-a5-2jC" kind="push" identifier="showRoute" id="y78-u0-dSK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -170,25 +173,33 @@
             </objects>
             <point key="canvasLocation" x="-452" y="0.0"/>
         </scene>
-        <!--Choise Station Controller-->
-        <scene sceneID="ihR-pE-mYb">
+        <!--Routes Controller-->
+        <scene sceneID="fel-Sj-3U4">
             <objects>
-                <viewController id="ncM-nA-sFn" customClass="ChoiseStationController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DNQ-jp-DSd"/>
-                        <viewControllerLayoutGuide type="bottom" id="tBG-Qa-mqO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hih-qm-198">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                <tableViewController id="Iyx-a5-2jC" customClass="RoutesController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="10" sectionFooterHeight="10" id="Phh-aq-zho">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="nZL-Ec-6dt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H4W-R4-k6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JjI-dg-49Z">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JjI-dg-49Z" id="uIx-Xm-dZH">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Iyx-a5-2jC" id="wHq-Ds-hgP"/>
+                            <outlet property="delegate" destination="Iyx-a5-2jC" id="ATj-y0-Nhk"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="tFa-zr-cns"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEJ-Lm-SXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="720"/>
+            <point key="canvasLocation" x="1334" y="720"/>
         </scene>
         <!--Date Departure Controller-->
         <scene sceneID="mPp-nc-NK4">
@@ -232,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rO-nA-mFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="720"/>
+            <point key="canvasLocation" x="1334" y="-684"/>
         </scene>
         <!--Scheme Controller-->
         <scene sceneID="p1Y-8b-BsE">

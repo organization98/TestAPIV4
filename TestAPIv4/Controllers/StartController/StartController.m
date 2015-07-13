@@ -34,6 +34,12 @@
 
 @implementation StartController
 
+// segue: StartController
+static NSString *const ShowDateDeparture    = @"showDateDeparture";
+static NSString *const ShowFromStation      = @"showFromStation";
+static NSString *const ShowToStation        = @"showToStation";
+static NSString *const ShowRoute            = @"showRoute";
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad
@@ -111,31 +117,33 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@"showDateDeparture"]) {
+#warning Добавить валидацию перед переходом в RoutesController
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:ShowDateDeparture]) {
         DateDepartureController *controller = (DateDepartureController *)segue.destinationViewController;
         controller.navigationItemTitle = @"Дата";
         controller.delegate = self;
-    } else if ([segue.identifier isEqualToString:@"showFromStation"]) {
+        
+    } else if ([segue.identifier isEqualToString:ShowFromStation]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
         controller.navigationItemTitle = @"Откуда";
         controller.delegate = self;
         self.direction = @"from";
-    } else if ([segue.identifier isEqualToString:@"showToStation"]) {
+        
+    } else if ([segue.identifier isEqualToString:ShowToStation]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
         controller.navigationItemTitle = @"Куда";
         controller.delegate = self;
         self.direction = @"to";
-    } else if ([segue.identifier isEqualToString:@"tabSegue"]) {
         
-        UITabBarController *tabBarController = segue.destinationViewController;
-        
-        UINavigationController *navController1 = [tabBarController.viewControllers objectAtIndex:0];
-        RoutesController *c1 = (RoutesController *)navController1.topViewController;
-        c1.stationFrom = self.stationFrom;
-        c1.stationTo = self.stationTo;
-        c1.startDate = @"2015-04-28"; //self.startDate; // нужно изменить формат даты для запроса
+    } else {
+        RoutesController *controller = (RoutesController *)segue.destinationViewController;
+        controller.navigationItemTitle = @"Билеты";
+        controller.stationFrom = self.stationFrom;
+        controller.stationTo = self.stationTo;
+        controller.startDate = @"2015-08-01";//[NSString stringFromDate:[NSDate getDate:[NSDate date] daysAhead:5]];
+        //self.startDate; // нужно изменить формат даты для запроса
     }
 }
 
@@ -202,3 +210,13 @@
 }
 
 @end
+
+/*
+ UITabBarController *tabBarController = segue.destinationViewController;
+ 
+ UINavigationController *navController1 = [tabBarController.viewControllers objectAtIndex:0];
+ RoutesController *c1 = (RoutesController *)navController1.topViewController;
+ c1.stationFrom = self.stationFrom;
+ c1.stationTo = self.stationTo;
+ c1.startDate = @"2015-04-28"; //self.startDate; // нужно изменить формат даты для запроса
+*/

@@ -71,7 +71,7 @@
         return;
     }
     // Выполнить транзакцию авторизации, сохраниить сессию
-    [self requestFromURL: urlOnLine completion:^(BOOL succes, id data, NSError *error) {
+    [self requestFromURL: urlOffLine completion:^(BOOL succes, id data, NSError *error) {
         if ([[data objectForKey:@"result"] isEqual:@"OK"]) {
             session = [data objectForKey:@"session"];
             block (succes, data, error);
