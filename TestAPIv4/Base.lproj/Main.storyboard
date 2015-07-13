@@ -212,6 +212,9 @@
                                     <segment title="Завтра"/>
                                     <segment title="Послезавтра"/>
                                 </segments>
+                                <connections>
+                                    <action selector="indexDidChangeForSegmentedControl:" destination="3UD-DV-UAv" eventType="valueChanged" id="DC7-q8-8Yk"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

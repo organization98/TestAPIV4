@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C0CC6AF1B52CDBE00A06E1B /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */; };
+		2CD667BD1B542E2600C945C1 /* NSDate+AddDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */; };
 		2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */; };
 		2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00061B526AF6003E2D27 /* DateDepartureController.m */; };
 		2CDA000B1B526B0B003E2D27 /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA000A1B526B0B003E2D27 /* RoutesController.m */; };
@@ -98,6 +99,8 @@
 /* Begin PBXFileReference section */
 		2C0CC6AD1B52CDBE00A06E1B /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
 		2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
+		2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+AddDay.h"; path = "NSDate+AddDay/NSDate+AddDay.h"; sourceTree = "<group>"; };
+		2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+AddDay.m"; path = "NSDate+AddDay/NSDate+AddDay.m"; sourceTree = "<group>"; };
 		2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
 		2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiseStationController.m; sourceTree = "<group>"; };
 		2CDA00051B526AF6003E2D27 /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
@@ -607,6 +610,8 @@
 				2CDA00241B526BE4003E2D27 /* NSString+NSDateFormatter */,
 				2CDA00201B526BDD003E2D27 /* NSString+ContainsStrModernizer */,
 				2CDA001C1B526BD6003E2D27 /* NSArray+Stations */,
+				2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */,
+				2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				321F7DC31AE272BB005DAEFE /* RSDFDatePickerDaysOfWeekView.m in Sources */,
 				3202F4EE1AE52376006563FD /* AFURLRequestSerialization.m in Sources */,
 				2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */,
+				2CD667BD1B542E2600C945C1 /* NSDate+AddDay.m in Sources */,
 				2CDA001F1B526BD6003E2D27 /* NSArray+Stations.m in Sources */,
 				2CDA001B1B526B64003E2D27 /* MoreController.m in Sources */,
 				321F7DCA1AE272BB005DAEFE /* UIImageView+AFNetworking.m in Sources */,

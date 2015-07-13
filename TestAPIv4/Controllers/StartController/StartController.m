@@ -34,7 +34,10 @@
 
 @implementation StartController
 
-- (void)viewDidLoad {
+#pragma mark - Life cycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // MAIN VIEW
@@ -95,54 +98,15 @@
     [self.buttonFindTickets.titleLabel setFont:[UIFont appFontWithSize:17.f]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)customizeButton:(UIButton *)button
-         withIdentifier:(NSString *)identifier
-               setImage:(NSString *)image
-               setTitle:(NSString *)title {
-    
-    button.restorationIdentifier = identifier;
-    
-    button.backgroundColor = SilverTreeColor;
-    // TODO: уточнить у Макса цвета для состояния UIControlStateHighlighted
-    [button setBackgroundImage:[UIImage imageWithColor:OceanGreenColor] forState:UIControlStateHighlighted];
-    
-    // направление контента внутри кновки:слева
-    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    [button setImageEdgeInsets:UIEdgeInsetsMake(0.f, 16.f, 0.f, 0.f)];
-    [button setTitleEdgeInsets:UIEdgeInsetsMake(0.f, 24.f, 0.f, 0.f)];
-    
-    // иконка (слева) для кнопки
-    [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-    
-    // шрифт и текст кнопки
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [button.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium.ttf" size:16.f]];
-    [button setTitle:title forState:UIControlStateNormal];
-}
-
-- (void)buttonDateTitle:(NSString *)name {
-    [self.buttonDateDeparture setTitle:name forState:UIControlStateNormal];
-}
-
-- (void)buttonFromTitle:(NSString *)name {
-    [self.buttonFromStation setTitle:name forState:UIControlStateNormal];
-}
-
-- (void)buttonToTitle:(NSString *)name {
-    [self.buttonToStation setTitle:name forState:UIControlStateNormal];
-}
-
 // прячем navigationController в MainController
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
 }
@@ -175,8 +139,11 @@
     }
 }
 
+#pragma mark - ChoiseStationControllerDelegate
+
 // изменяем Title для кнопок From и To
-- (void)setStationName:(NSString *)name andCode:(NSString *)code {
+- (void)setStationName:(NSString *)name andCode:(NSString *)code
+{
     if ([self.direction isEqual:@"from"]) {
         [self buttonFromTitle:name];
         self.stationFrom = code;
@@ -186,10 +153,52 @@
     }
 }
 
+#pragma mark - DateDepartureControllerDelegate
+
 // изменяем Title для кнопоки Departure Date
-- (void)setDepartureDate:(NSDate *)date {
+- (void)setDepartureDate:(NSDate *)date
+{
     [self buttonDateTitle:[NSString stringFromDate:date]];
     self.startDate = [NSString stringWithFormat:@"%@", date];
+}
+
+#pragma mark - Private methods
+
+- (void)customizeButton:(UIButton *)button withIdentifier:(NSString *)identifier setImage:(NSString *)image setTitle:(NSString *)title
+{
+    button.restorationIdentifier = identifier;
+    
+    button.backgroundColor = SilverTreeColor;
+    // TODO: уточнить у Макса цвета для состояния UIControlStateHighlighted
+    [button setBackgroundImage:[UIImage imageWithColor:OceanGreenColor] forState:UIControlStateHighlighted];
+    
+    // направление контента внутри кновки:слева
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0.f, 16.f, 0.f, 0.f)];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0.f, 24.f, 0.f, 0.f)];
+    
+    // иконка (слева) для кнопки
+    [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    
+    // шрифт и текст кнопки
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [button.titleLabel setFont:[UIFont appFontWithSize:16.f]];
+    [button setTitle:title forState:UIControlStateNormal];
+}
+
+- (void)buttonDateTitle:(NSString *)name
+{
+    [self.buttonDateDeparture setTitle:name forState:UIControlStateNormal];
+}
+
+- (void)buttonFromTitle:(NSString *)name
+{
+    [self.buttonFromStation setTitle:name forState:UIControlStateNormal];
+}
+
+- (void)buttonToTitle:(NSString *)name
+{
+    [self.buttonToStation setTitle:name forState:UIControlStateNormal];
 }
 
 @end

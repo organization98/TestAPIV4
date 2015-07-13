@@ -14,9 +14,19 @@
 
 @end
 
+
 @implementation DateDepartureController
 
-- (void)viewDidLoad {
+typedef NS_ENUM(NSInteger, SegmentedControlItems) {
+    Today,
+    Tomorrow,
+    DayAfterTomorrow
+};
+
+#pragma mark - Life cycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.view.backgroundColor = DesertStormColor;
@@ -96,6 +106,32 @@
 - (BOOL)datePickerView:(RSDFDatePickerView *)view isCompletedAllTasksOnDate:(NSDate *)date
 {
     return YES;
+}
+
+#pragma mark - SegmentedControl
+#warning Какое время для дата "Сегодня"?
+- (IBAction)indexDidChangeForSegmentedControl:(UISegmentedControl *)aSegmentedControl
+{
+    switch (aSegmentedControl.selectedSegmentIndex)
+    {
+        case Today: {
+            [self.delegate setDepartureDate:[NSDate date]];
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+        case Tomorrow: {
+            [self.delegate setDepartureDate:[NSDate getDate:[NSDate date] daysAhead:Tomorrow]]; //+1
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+        case DayAfterTomorrow: {
+            [self.delegate setDepartureDate:[NSDate getDate:[NSDate date] daysAhead:DayAfterTomorrow]]; //+2
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 @end
