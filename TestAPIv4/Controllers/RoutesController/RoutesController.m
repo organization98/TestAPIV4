@@ -34,6 +34,8 @@
 {
     [super viewDidLoad];
     
+    [self addRightBarButtonItems];
+    
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
     border.borderWidth = 1.f;
@@ -162,6 +164,31 @@
 {
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+}
+
+#pragma mark - Private methods
+
+- (void)addRightBarButtonItems
+{
+    UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]]];
+    [btnSearch setTarget:self];
+    [btnSearch setAction:@selector(searchAction)];
+    
+    UIBarButtonItem *btnFilter = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"filter"]]];
+    [btnFilter setTarget:self];
+    [btnFilter setAction:@selector(filterAction)];
+    
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnSearch, btnFilter, nil]];
+}
+
+- (void)searchAction
+{
+    NSLog(@"Search called");
+}
+
+- (void)filterAction
+{
+    NSLog(@"Search called");
 }
 
 @end
