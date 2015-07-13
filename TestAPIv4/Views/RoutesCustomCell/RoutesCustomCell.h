@@ -26,6 +26,10 @@
 @property (strong, nonatomic) NSString *wagonType;
 @property (strong, nonatomic) NSString *trainNumber;
 
++ (instancetype)initializeCell;
++ (NSString *)reuseIdentifier;
+- (void)configForItem:(id)object;
+// ---------------------
 - (void)updatePrice:(NSNotification *)n;
 - (void)addPriceToLabel:(NSDictionary *)dict;
 

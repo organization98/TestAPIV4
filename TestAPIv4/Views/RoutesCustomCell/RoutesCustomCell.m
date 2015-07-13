@@ -10,19 +10,15 @@
 
 @implementation RoutesCustomCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
++ (instancetype)initializeCell
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
+    return [nibObjects objectAtIndex:0];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
++ (NSString *)reuseIdentifier
 {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
+    return NSStringFromClass([self class]);
 }
 
 - (void)updatePrice:(NSNotification *)notification
@@ -39,5 +35,20 @@
         [self addSubview:self.labelCost];
     }
 }
+
+
+//-------------------------
+
+- (void)configForItem:(id)object
+{
+    NSLog(@"%@", object);
+    
+//    self.fullName.text = items.name;
+//    self.age.text = [items.age stringValue];
+//    self.department.text = items.department;
+//    self.position.text = items.position;
+//    self.salary.text = [items.salary stringValue];
+}
+
 
 @end

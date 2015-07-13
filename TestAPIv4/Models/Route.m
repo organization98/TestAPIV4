@@ -10,7 +10,8 @@
 
 @implementation Route
 
-+ (Route *)sharedManager {
++ (Route *)sharedManager
+{
     static Route *manager = nil;
     static dispatch_once_t onceTaken;
     dispatch_once (&onceTaken, ^{

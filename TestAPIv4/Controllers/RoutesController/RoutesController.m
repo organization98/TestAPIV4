@@ -11,13 +11,6 @@
 #import "SchemeController.h"
 #import "StartController.h"
 
-@interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@end
-
-
 @implementation RoutesController
 {
     NSArray *routesArray;
@@ -40,8 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSLog(@"CALLING - %@", self.navigationItemTitle);
     
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
@@ -91,17 +82,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RoutesCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    RoutesCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:[RoutesCustomCell reuseIdentifier]];
+    
     if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:@"RoutesCustomCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+        cell = [RoutesCustomCell initializeCell];
     }
+    
     route = [routesArray objectAtIndex:indexPath.section];
+    
+    [cell configForItem:route];
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
-
+#warning Перенести в RoutesCustomCell в метод configForItem
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     cell.backgroundColor = DesertStormColor;
@@ -132,7 +127,7 @@
     self.wagonNumber = [route objectForKey:@"wagon_number"];
     self.wagonType = [route objectForKey:@"wagon_type"];
 //    self.placesDict = [route objectForKey:@""]
-    NSLog(@"Поезд %@, Вагон %@, Тип вагона %@", [route objectForKey:@"number"], [route objectForKey:@"wagon_number"], [route objectForKey:@"wagon_type"]);
+//    NSLog(@"Поезд %@, Вагон %@, Тип вагона %@", [route objectForKey:@"number"], [route objectForKey:@"wagon_number"], [route objectForKey:@"wagon_type"]);
     // --------------------------------------------------------------------------------------
     
     cell.trainNumber = [route objectForKey:@"number"];
@@ -155,7 +150,7 @@
         if (!data)
             return;
         routesArray = [[self dictionaryFromJSON:data with:error] objectForKey:@"items"];
-        NSLog(@"%@", routesArray);
+//        NSLog(@"%@", routesArray);
         
         [self.tableView reloadData];
         [DejalActivityView removeView];
