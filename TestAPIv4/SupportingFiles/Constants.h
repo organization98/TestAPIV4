@@ -15,6 +15,8 @@
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.f && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.f)
 #define IOS8_AND_LETER ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending)
 
+#define SEARCH_RESULT_TABLE_VIEW tableView == self.searchDisplayController.searchResultsTableView
+
 // base colors
 #define MintColor [UIColor colorWithHexString:@"#4BB179"]           // base green
 #define SilverTreeColor [UIColor colorWithHexString:@"#5DB886"]     // button green

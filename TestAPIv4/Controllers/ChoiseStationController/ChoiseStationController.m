@@ -9,15 +9,14 @@
 #import "ChoiseStationController.h"
 #import "StartController.h"
 
-@interface ChoiseStationController () <UITextFieldDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating>
+@interface ChoiseStationController () <UISearchDisplayDelegate>
 
-@property (weak, nonatomic) IBOutlet UISearchController *searchField;
 @property (strong, nonatomic) NSArray *stations;
-@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 
 @end
 
-static NSString *const cellIdentifier = @"Cell";
+static NSString *const ReuseIdentifier = @"Cell";
 
 @implementation ChoiseStationController
 
@@ -28,6 +27,7 @@ static NSString *const cellIdentifier = @"Cell";
     [super viewDidLoad];
     
     [self initializeTable];
+    self.searchResults = [[NSMutableArray alloc] init];
     
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
@@ -38,30 +38,25 @@ static NSString *const cellIdentifier = @"Cell";
     self.navigationItem.title = self.navigationItemTitle;
     self.navigationController.navigationBar.topItem.title = @""; // delete back
     
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchController.searchResultsUpdater = self;
-    self.searchController.dimsBackgroundDuringPresentation = YES;
-    self.searchController.searchBar.delegate = self;
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    self.definesPresentationContext = YES;
-    [self.searchController.searchBar sizeToFit];
-    self.searchDisplayController.delegate = self;
+    self.navigationController.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.stations count];
+    return (SEARCH_RESULT_TABLE_VIEW) ? [self.searchResults count] : [self.stations count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    cell.textLabel.text = [[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier];
+    if (!cell)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReuseIdentifier];
+    
+    NSDictionary *station = (SEARCH_RESULT_TABLE_VIEW) ? [self.searchResults objectAtIndex:indexPath.row] : [self.stations objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [[station objectForKey:kStationNameRU] capitalizedString];
     cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-orange"]];
     return cell;
 }
@@ -70,9 +65,8 @@ static NSString *const cellIdentifier = @"Cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Получить название станции и ее код
-    [self.delegate setStationName:[[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationNameRU] capitalizedString] andCode:[[self.stations objectAtIndex:indexPath.row] objectForKey:kStationCode]];
-    
+    NSDictionary *station = (SEARCH_RESULT_TABLE_VIEW) ? [self.searchResults objectAtIndex:indexPath.row] : [self.stations objectAtIndex:indexPath.row];
+    [self.delegate setStationName:[[station objectForKey:kStationNameRU] capitalizedString] andCode:[station objectForKey:kStationCode]];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -87,27 +81,19 @@ static NSString *const cellIdentifier = @"Cell";
         [cell setSeparatorInset:UIEdgeInsetsZero];
 }
 
-#pragma mark - UISearchDisplayController delegate methods
+#pragma mark - UISearchDisplayDelegate
 
-- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    [self updateSearchResultsForSearchController:self.searchController];
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
 }
 
-#pragma mark - UISearchResultsUpdating
-
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
-    NSString *searchString = searchController.searchBar.text;
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
     
-    if([searchString length] <= 0) {
-        [self.tableView reloadData];
-        return;
-    }
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains [cd] %@", searchString];
-    self.stations = [self.stations filteredArrayUsingPredicate:predicate];
-    [self.tableView reloadData];
+    return YES;
 }
 
 #pragma mark - Private methods
@@ -116,6 +102,34 @@ static NSString *const cellIdentifier = @"Cell";
 {
     self.stations = [[NSArray alloc] init];
     self.stations = [NSArray stationsArray];
+}
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    /*
+     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
+     self.searchResults = [self.stations filteredArrayUsingPredicate:predicate];
+     */
+    
+    /*
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        NSString *stationName = [evaluatedObject objectForKey:kStationNameRU];
+        if([stationName rangeOfString:searchText].location != NSNotFound) {
+            return YES;
+        }
+        return NO;
+    }];
+    self.searchResults = [self.stations filteredArrayUsingPredicate:predicate];
+     */
+    
+    for (NSDictionary *station in self.stations) {
+        NSRange textRange = [[station objectForKey:kStationNameRU] rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (textRange.location != NSNotFound) {
+            [self.searchResults addObject:station];
+        } else {
+            [self.searchResults removeObjectIdenticalTo:station];
+        }
+    }
 }
 
 @end

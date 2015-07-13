@@ -276,15 +276,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search stations" id="o3P-3Q-YYT">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search stations" id="Dbe-ha-uhH">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                            </scopeButtonTitles>
+                            <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="3Zp-J7-G2j" id="EcG-fP-QEt"/>
+                                <outlet property="delegate" destination="3Zp-J7-G2j" id="WF9-kV-mmZ"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -296,7 +293,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXW-7s-WW6">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="pin-gray" id="xxk-Qi-p0K">
@@ -315,10 +312,19 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="rpf-7T-JpQ"/>
                     <connections>
-                        <outlet property="searchField" destination="o3P-3Q-YYT" id="8P9-QB-Q66"/>
+                        <outlet property="searchDisplayController" destination="LX4-h2-4Qh" id="GDg-Hl-WQW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcx-5S-qqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="LX4-h2-4Qh">
+                    <connections>
+                        <outlet property="delegate" destination="3Zp-J7-G2j" id="d1T-vP-mZN"/>
+                        <outlet property="searchBar" destination="Dbe-ha-uhH" id="j8R-Gf-3DQ"/>
+                        <outlet property="searchContentsController" destination="3Zp-J7-G2j" id="nls-rZ-QeR"/>
+                        <outlet property="searchResultsDataSource" destination="3Zp-J7-G2j" id="npB-AM-EdS"/>
+                        <outlet property="searchResultsDelegate" destination="3Zp-J7-G2j" id="TEf-Wf-c1m"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1334" y="0.0"/>
         </scene>

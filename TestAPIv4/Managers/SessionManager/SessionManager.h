@@ -26,8 +26,6 @@ typedef void (^NetworkBlock)(BOOL succes, id data, NSError *error);
 
 - (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block;
 
-- (void)getStationsBlock:(NetworkBlock)block;
-
 - (NSDictionary *)getPlaces:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls;
 
 @end
