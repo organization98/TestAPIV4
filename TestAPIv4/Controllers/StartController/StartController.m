@@ -151,6 +151,7 @@
     
     if ([segue.identifier isEqualToString:@"showDateDeparture"]) {
         DateDepartureController *controller = (DateDepartureController *)segue.destinationViewController;
+        controller.navigationItemTitle = @"Дата";
         controller.delegate = self;
     } else if ([segue.identifier isEqualToString:@"showFromStation"]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;

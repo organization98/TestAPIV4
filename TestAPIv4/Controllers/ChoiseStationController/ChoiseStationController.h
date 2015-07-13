@@ -11,9 +11,7 @@
 @protocol ChoiseStationControllerDelegate <NSObject>
 
 @required
-
 - (void)setStationName:(NSString *)name andCode:(NSString *)code;
-//- (void)setDepartureDate:(NSString *)date;
 
 @end
 

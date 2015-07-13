@@ -10,7 +10,7 @@
 
 @interface DateDepartureController () <RSDFDatePickerViewDelegate, RSDFDatePickerViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentChoiseDate;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -21,21 +21,33 @@
     
     self.view.backgroundColor = DesertStormColor;
     
-    self.navigationItem.title = NSStringFromClass([DateDepartureController class]);
+    CALayer *border = [CALayer layer];
+    border.borderColor = MintColor.CGColor;
+    border.borderWidth = 1.f;
+    CALayer *layer = self.navigationController.navigationBar.layer;
+    border.frame = CGRectMake(0.f, layer.bounds.size.height, layer.bounds.size.width, 1.f);
+    [layer addSublayer:border];
+    self.navigationItem.title = self.navigationItemTitle;
+    self.navigationController.navigationBar.topItem.title = @""; // delete back
     
     // SEGMENT CHOISE DATE
-    self.segmentChoiseDate.tintColor = SorbusColor;
-    self.segmentChoiseDate.selectedSegmentIndex = -1;
+    self.segmentedControl.tintColor = SorbusColor;
+    self.segmentedControl.selectedSegmentIndex = -1;
     
     // CALENDAR
-    RSDFDatePickerView *datePickerView = [[RSDFDatePickerView alloc] initWithFrame:CGRectMake
-                                          (0,
-                                           20 + self.segmentChoiseDate.bounds.size.height + 20,
-                                           self.view.bounds.size.width,
-                                           self.view.bounds.size.height -20 - 44 - 20 - self.segmentChoiseDate.bounds.size.height - 20 - 20)];
+    CGRect datePickerViewRect;
+    
+    // это начало пиздеца!
+    datePickerViewRect.origin.x = 0.f;
+    datePickerViewRect.origin.y = 20.f + CGRectGetHeight(self.segmentedControl.frame) + 20.f;
+    datePickerViewRect.size.width = CGRectGetWidth([UIScreen mainScreen].bounds);
+    datePickerViewRect.size.height = CGRectGetHeight([UIScreen mainScreen].bounds) - CGRectGetHeight(self.tabBarController.tabBar.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame) - datePickerViewRect.origin.y - CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
+    // это завершение пиздеца!
+    RSDFDatePickerView *datePickerView = [[RSDFDatePickerView alloc] initWithFrame:datePickerViewRect];
+    [self.view addSubview:datePickerView];
+    
     datePickerView.delegate = self;
     datePickerView.dataSource = self;
-    [self.view addSubview:datePickerView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,17 +58,20 @@
 #pragma mark - RSDFDatePickerViewDelegate
 
 // Returns YES if the date should be highlighted or NO if it should not.
-- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldHighlightDate:(NSDate *)date {
+- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldHighlightDate:(NSDate *)date
+{
     return YES;
 }
 
 // Returns YES if the date should be selected or NO if it should not.
-- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldSelectDate:(NSDate *)date {
+- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldSelectDate:(NSDate *)date
+{
     return YES;
 }
 
 // Prints out the selected date.
-- (void)datePickerView:(RSDFDatePickerView *)view didSelectDate:(NSDate *)date {
+- (void)datePickerView:(RSDFDatePickerView *)view didSelectDate:(NSDate *)date
+{
     [self.delegate setDepartureDate:date];
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -64,7 +79,8 @@
 #pragma mark - RSDFDatePickerViewDataSource
 
 // Returns YES if the date should be marked or NO if it should not.
-- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldMarkDate:(NSDate *)date {
+- (BOOL)datePickerView:(RSDFDatePickerView *)view shouldMarkDate:(NSDate *)date
+{
     // The date is an `NSDate` object without time components.
     // So, we need to use dates without time components.
     
@@ -77,7 +93,8 @@
 }
 
 // Returns YES if all tasks on the date are completed or NO if they are not completed.
-- (BOOL)datePickerView:(RSDFDatePickerView *)view isCompletedAllTasksOnDate:(NSDate *)date {
+- (BOOL)datePickerView:(RSDFDatePickerView *)view isCompletedAllTasksOnDate:(NSDate *)date
+{
     return YES;
 }
 

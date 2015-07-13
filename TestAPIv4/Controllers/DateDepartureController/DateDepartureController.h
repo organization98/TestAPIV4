@@ -19,7 +19,7 @@
 @interface DateDepartureController : UIViewController
 
 @property (strong, nonatomic) NSString *dateDeparture;
-
+@property (strong, nonatomic) NSString *navigationItemTitle;
 @property (nonatomic, strong) id <DateDepartureControllerDelegate> delegate;
 
 @end

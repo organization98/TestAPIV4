@@ -19,7 +19,7 @@
                                                            NSForegroundColorAttributeName : WhiteColor}];
     
     [[UISearchBar appearance] setTintColor:MintColor];
-    [[UISearchBar appearance] setBarTintColor:MintColor];
+//    [[UISearchBar appearance] setBarTintColor:MintColor];
     
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:MintColor];

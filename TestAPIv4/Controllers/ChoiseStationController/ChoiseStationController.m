@@ -27,15 +27,7 @@ static NSString *const cellIdentifier = @"Cell";
 {
     [super viewDidLoad];
     
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchController.searchResultsUpdater = self;
-    self.searchController.dimsBackgroundDuringPresentation = YES;
-    
-    self.searchController.searchBar.delegate = self;
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    self.definesPresentationContext = YES;
-    
-    [self.searchController.searchBar sizeToFit];
+    [self initializeTable];
     
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
@@ -43,14 +35,17 @@ static NSString *const cellIdentifier = @"Cell";
     CALayer *layer = self.navigationController.navigationBar.layer;
     border.frame = CGRectMake(0.f, layer.bounds.size.height, layer.bounds.size.width, 1.f);
     [layer addSublayer:border];
-    
+    self.navigationItem.title = self.navigationItemTitle;
     self.navigationController.navigationBar.topItem.title = @""; // delete back
     
-    [self initializeTable];
-    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = YES;
+    self.searchController.searchBar.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    [self.searchController.searchBar sizeToFit];
     self.searchDisplayController.delegate = self;
-    
-    self.navigationItem.title = self.navigationItemTitle;
 }
 
 #pragma mark - UITableViewDataSource
