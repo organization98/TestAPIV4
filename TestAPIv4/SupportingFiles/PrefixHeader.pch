@@ -27,6 +27,7 @@
 #import "NSArray+Stations.h"
 #import "UIFont+AppFont.h"
 #import "NSDate+AddDay.h"
+#import "NSDictionary+WagonTypes.h"
 
 // frameworks
 #import "AFNetworking.h"

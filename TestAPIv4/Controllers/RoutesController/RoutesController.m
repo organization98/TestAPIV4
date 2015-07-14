@@ -87,15 +87,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RoutesCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:[RoutesCustomCell reuseIdentifier]];
-    
     if (!cell) {
         cell = [RoutesCustomCell initializeCell];
     }
-    
     route = [routesArray objectAtIndex:indexPath.section];
-    
     [cell configForItem:route];
-    
     return cell;
 }
 
@@ -119,9 +115,7 @@
     cell.labelCost.text = nil;
     
     // блок тип вагона
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"WagonTypes" ofType:@"plist"];
-    NSDictionary *wagonTypesDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    cell.labelWagonType.text = [wagonTypesDict objectForKey:[route objectForKey:@"wagon_type"]];
+    cell.labelWagonType.text = [[NSDictionary wagonTypesDictionary] objectForKey:[route objectForKey:@"wagon_type"]];
     
     // блок места
     cell.labelCountPlaces.text = [route objectForKey:@"count"];
@@ -154,7 +148,6 @@
         if (!data)
             return;
         routesArray = [[self dictionaryFromJSON:data with:error] objectForKey:@"items"];
-//        NSLog(@"%@", routesArray);
         
         [self.tableView reloadData];
         [DejalActivityView removeView];
@@ -167,8 +160,6 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
 }
-
-#pragma mark - Private methods
 
 - (void)addRightBarButtonItems
 {

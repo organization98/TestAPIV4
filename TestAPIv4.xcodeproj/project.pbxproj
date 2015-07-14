@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C0CC6AF1B52CDBE00A06E1B /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */; };
+		2CB73DE61B54EB8A004B01B7 /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB73DE41B54EB8A004B01B7 /* all_stations.plist */; };
+		2CB73DE71B54EB8A004B01B7 /* wagon_types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB73DE51B54EB8A004B01B7 /* wagon_types.plist */; };
+		2CB73DEA1B54EC79004B01B7 /* NSDictionary+WagonTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB73DE91B54EC79004B01B7 /* NSDictionary+WagonTypes.m */; };
 		2CD667BD1B542E2600C945C1 /* NSDate+AddDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */; };
 		2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */; };
 		2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00061B526AF6003E2D27 /* DateDepartureController.m */; };
@@ -24,7 +27,6 @@
 		2CDA00331B526BF7003E2D27 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00321B526BF7003E2D27 /* UIImage+ImageWithColor.m */; };
 		2CDA00371B526C2E003E2D27 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00361B526C2E003E2D27 /* PricesManager.m */; };
 		2CDA003B1B526C34003E2D27 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA003A1B526C34003E2D27 /* SessionManager.m */; };
-		2CDAFFE91B526043003E2D27 /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFE81B526043003E2D27 /* all_stations.plist */; };
 		2CDAFFEF1B5268E6003E2D27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */; };
 		2CDAFFF11B526970003E2D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDAFFF01B526970003E2D27 /* Images.xcassets */; };
 		2CDAFFF51B5269D4003E2D27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDAFFF41B5269D4003E2D27 /* AppDelegate.m */; };
@@ -99,6 +101,10 @@
 /* Begin PBXFileReference section */
 		2C0CC6AD1B52CDBE00A06E1B /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
 		2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
+		2CB73DE41B54EB8A004B01B7 /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = all_stations.plist; sourceTree = "<group>"; };
+		2CB73DE51B54EB8A004B01B7 /* wagon_types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wagon_types.plist; sourceTree = "<group>"; };
+		2CB73DE81B54EC79004B01B7 /* NSDictionary+WagonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+WagonTypes.h"; path = "NSDictionary+WagonTypes/NSDictionary+WagonTypes.h"; sourceTree = "<group>"; };
+		2CB73DE91B54EC79004B01B7 /* NSDictionary+WagonTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+WagonTypes.m"; path = "NSDictionary+WagonTypes/NSDictionary+WagonTypes.m"; sourceTree = "<group>"; };
 		2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+AddDay.h"; path = "NSDate+AddDay/NSDate+AddDay.h"; sourceTree = "<group>"; };
 		2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+AddDay.m"; path = "NSDate+AddDay/NSDate+AddDay.m"; sourceTree = "<group>"; };
 		2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
@@ -133,7 +139,6 @@
 		2CDA003A1B526C34003E2D27 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		2CDAFFE51B525FA3003E2D27 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
 		2CDAFFE61B525FA3003E2D27 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SupportingFiles/PrefixHeader.pch; sourceTree = "<group>"; };
-		2CDAFFE81B526043003E2D27 /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = all_stations.plist; path = "Resources/Property List/all_stations.plist"; sourceTree = "<group>"; };
 		2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Resources/Localizable.strings; sourceTree = "<group>"; };
 		2CDAFFF01B526970003E2D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		2CDAFFF31B5269D4003E2D27 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -260,6 +265,25 @@
 				2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */,
 			);
 			path = "UIFont+AppFont";
+			sourceTree = "<group>";
+		};
+		2CB73DE31B54EB8A004B01B7 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				2CB73DE41B54EB8A004B01B7 /* all_stations.plist */,
+				2CB73DE51B54EB8A004B01B7 /* wagon_types.plist */,
+			);
+			name = PropertyList;
+			path = Resources/PropertyList;
+			sourceTree = "<group>";
+		};
+		2CB73DEB1B54EC83004B01B7 /* NSDictionary+WagonTypes */ = {
+			isa = PBXGroup;
+			children = (
+				2CB73DE81B54EC79004B01B7 /* NSDictionary+WagonTypes.h */,
+				2CB73DE91B54EC79004B01B7 /* NSDictionary+WagonTypes.m */,
+			);
+			name = "NSDictionary+WagonTypes";
 			sourceTree = "<group>";
 		};
 		2CD667BE1B543E1200C945C1 /* NSDate+AddDay */ = {
@@ -411,14 +435,6 @@
 				2CDA003A1B526C34003E2D27 /* SessionManager.m */,
 			);
 			path = SessionManager;
-			sourceTree = "<group>";
-		};
-		2CDAFFE71B525FD0003E2D27 /* Property List */ = {
-			isa = PBXGroup;
-			children = (
-				2CDAFFE81B526043003E2D27 /* all_stations.plist */,
-			);
-			name = "Property List";
 			sourceTree = "<group>";
 		};
 		2CDAFFF21B5269D4003E2D27 /* AppDelegate */ = {
@@ -620,6 +636,7 @@
 				2CDA00201B526BDD003E2D27 /* NSString+ContainsStrModernizer */,
 				2CDA001C1B526BD6003E2D27 /* NSArray+Stations */,
 				2CD667BE1B543E1200C945C1 /* NSDate+AddDay */,
+				2CB73DEB1B54EC83004B01B7 /* NSDictionary+WagonTypes */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -700,7 +717,7 @@
 			children = (
 				2CDAFFF01B526970003E2D27 /* Images.xcassets */,
 				2CDAFFEE1B5268E6003E2D27 /* Localizable.strings */,
-				2CDAFFE71B525FD0003E2D27 /* Property List */,
+				2CB73DE31B54EB8A004B01B7 /* PropertyList */,
 				321F7E061AE28317005DAEFE /* Roboto Font Collection */,
 			);
 			name = Resources;
@@ -850,6 +867,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB73DE61B54EB8A004B01B7 /* all_stations.plist in Resources */,
 				321F7E261AE28317005DAEFE /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				321F7E231AE28317005DAEFE /* Roboto-Thin.ttf in Resources */,
 				321F7E291AE28317005DAEFE /* RobotoCondensed-LightItalic.ttf in Resources */,
@@ -862,11 +880,11 @@
 				328D92E41AE25B76006BDD04 /* Main.storyboard in Resources */,
 				321F7E1F1AE28317005DAEFE /* Roboto-LightItalic.ttf in Resources */,
 				321F7E211AE28317005DAEFE /* Roboto-MediumItalic.ttf in Resources */,
-				2CDAFFE91B526043003E2D27 /* all_stations.plist in Resources */,
 				2CDAFFEF1B5268E6003E2D27 /* Localizable.strings in Resources */,
 				321F7E1E1AE28317005DAEFE /* Roboto-Light.ttf in Resources */,
 				321F7E2A1AE28317005DAEFE /* RobotoCondensed-Regular.ttf in Resources */,
 				321F7E271AE28317005DAEFE /* RobotoCondensed-Italic.ttf in Resources */,
+				2CB73DE71B54EB8A004B01B7 /* wagon_types.plist in Resources */,
 				328D92E91AE25B76006BDD04 /* LaunchScreen.xib in Resources */,
 				321F7E1A1AE28317005DAEFE /* Roboto-BlackItalic.ttf in Resources */,
 				321F7E241AE28317005DAEFE /* Roboto-ThinItalic.ttf in Resources */,
@@ -911,6 +929,7 @@
 				321F7DBF1AE272BB005DAEFE /* NSCalendar+RSDFAdditions.m in Sources */,
 				321F7DBE1AE272BB005DAEFE /* DejalActivityView.m in Sources */,
 				321F7DC81AE272BB005DAEFE /* UIAlertView+AFNetworking.m in Sources */,
+				2CB73DEA1B54EC79004B01B7 /* NSDictionary+WagonTypes.m in Sources */,
 				2CDA00131B526B2B003E2D27 /* WebViewController.m in Sources */,
 				2CE045E41B527C0B00DBC8A3 /* SchemeType40.m in Sources */,
 				2CDA002B1B526BEB003E2D27 /* NSURLRequest+IgnoreSSL.m in Sources */,
