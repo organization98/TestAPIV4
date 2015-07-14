@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) NSString *stationFrom;
 @property (strong, nonatomic) NSString *stationTo;
-@property (strong, nonatomic) NSString *startDate;
+@property (strong, nonatomic) NSDate *startDate;
 
 @end

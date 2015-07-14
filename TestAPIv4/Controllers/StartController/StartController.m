@@ -141,8 +141,9 @@ static NSString *const ShowRoute            = @"showRoute";
         RoutesController *controller = (RoutesController *)segue.destinationViewController;
         controller.navigationItemTitle = @"Билеты";
         controller.stationFrom = self.stationFrom;
-        controller.stationTo = self.stationTo;
-        controller.startDate = @"2015-08-01";//[NSString stringFromDate:[NSDate getDate:[NSDate date] daysAhead:5]];
+        controller.stationTo = self.stationTo;        
+        controller.startDate = [NSString stringForRequest:self.startDate];
+        //@"2015-08-01";//[NSString stringFromDate:[NSDate getDate:[NSDate date] daysAhead:5]];
         //self.startDate; // нужно изменить формат даты для запроса
     }
 }
@@ -166,7 +167,7 @@ static NSString *const ShowRoute            = @"showRoute";
 // изменяем Title для кнопоки Departure Date
 - (void)setDepartureDate:(NSDate *)date
 {
-    [self buttonDateTitle:[NSString stringFromDate:date]];
+    [self buttonDateTitle:[NSString stringForDepartureDateButton:date]];
     self.startDate = [NSString stringWithFormat:@"%@", date];
 }
 

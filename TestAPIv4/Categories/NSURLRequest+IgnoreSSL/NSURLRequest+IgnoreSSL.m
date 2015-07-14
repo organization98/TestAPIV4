@@ -10,8 +10,8 @@
 
 @implementation NSURLRequest (IgnoreSSL)
 
-+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString*)host {
-
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString*)host
+{
     if ([host hasSuffix:@"test.plategka.com"]) {
         return YES;
     } else {

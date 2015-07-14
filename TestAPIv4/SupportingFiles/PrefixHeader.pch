@@ -20,7 +20,7 @@
 
 // categories
 #import "NSString+ContainsStrModernizer.h"
-#import "NSString+NSDateFormatter.h"
+#import "NSString+AppDateManager.h"
 #import "NSURLRequest+IgnoreSSL.h"
 #import "UIColor+ConvertHEX.h"
 #import "UIImage+ImageWithColor.h"
@@ -28,6 +28,7 @@
 #import "UIFont+AppFont.h"
 #import "NSDate+AddDay.h"
 #import "NSDictionary+WagonTypes.h"
+#import "NSDateFormatter+SetDateFormat.h"
 
 // frameworks
 #import "AFNetworking.h"

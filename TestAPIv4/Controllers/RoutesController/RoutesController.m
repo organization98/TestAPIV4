@@ -107,8 +107,8 @@
     cell.labelRouteTitle.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
     
     // блок время (косяк!)
-    cell.labelDepartureDate.text = [NSString dateFromString:[route objectForKey:@"departure_date"]];
-    cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
+    cell.labelDepartureDate.text = [NSString dateForDepartureArrivalLabel:[route objectForKey:@"departure_date"]];
+    cell.labelArrivalDate.text = [NSString dateForDepartureArrivalLabel:[route objectForKey:@"arrival_date"]];
     cell.labelTravelTime.text = [NSString travelTimeFromString:[route objectForKey:@"travel_time"]];
     
     // блок цена
