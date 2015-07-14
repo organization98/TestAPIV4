@@ -29,6 +29,7 @@
 #import "NSDate+AddDay.h"
 #import "NSDictionary+WagonTypes.h"
 #import "NSDateFormatter+SetDateFormat.h"
+#import "NSDictionary+DictionaryFromJSON.h"
 
 // frameworks
 #import "AFNetworking.h"

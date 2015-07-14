@@ -36,8 +36,6 @@
     
     [self addRightBarButtonItems];
     
-    self.tableView.backgroundColor = DesertStormColor;
-    
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
     border.borderWidth = 1.f;
@@ -147,18 +145,12 @@
     [[SessionManager sharedManager] getRoutes:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
         if (!data)
             return;
-        routesArray = [[self dictionaryFromJSON:data with:error] objectForKey:@"items"];
+        routesArray = [[NSDictionary dictionaryFromJSON:data with:error] objectForKey:@"items"];
         
         [self.tableView reloadData];
         [DejalActivityView removeView];
         [self.tableView setHidden:NO];
     }];
-}
-
-- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error
-{
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
-    return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
 }
 
 - (void)addRightBarButtonItems

@@ -25,6 +25,10 @@
 
 @property (strong, nonatomic) NSString *direction;
 
+@property (assign, nonatomic) BOOL fromStationSelected;
+@property (assign, nonatomic) BOOL toStationSelected;
+@property (assign, nonatomic) BOOL startDateSelected;
+
 @end
 
 
@@ -36,11 +40,24 @@ static NSString *const ShowFromStation      = @"showFromStation";
 static NSString *const ShowToStation        = @"showToStation";
 static NSString *const ShowRoute            = @"showRoute";
 
+// button title
+static NSString *const FromStationTitle     = @"Откуда";
+static NSString *const ToStationTitle       = @"Куда";
+static NSString *const DateDepartureTitle   = @"Дата отправления";
+static NSString *const FindTicketsTitle     = @"Найти билеты";
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.stationFrom = nil;
+    self.stationTo = nil;
+    
+    self.fromStationSelected = NO;
+    self.toStationSelected = NO;
+    self.startDateSelected = NO;
     
     // MAIN VIEW
     self.view.backgroundColor = MintColor;
@@ -58,13 +75,13 @@ static NSString *const ShowRoute            = @"showRoute";
     [self customizeButton:self.buttonFromStation
            withIdentifier:@"from"
                  setImage:@"carFrom"
-                 setTitle:@"Откуда"];
+                 setTitle:FromStationTitle];
     
     // BUTTON TO STATION
     [self customizeButton:self.buttonToStation
            withIdentifier:@"to"
                  setImage:@"carTo"
-                 setTitle:@"Куда"];
+                 setTitle:ToStationTitle];
     
     // BUTTON CHANGE
     self.buttonChange.backgroundColor = OceanGreenColor;
@@ -76,7 +93,7 @@ static NSString *const ShowRoute            = @"showRoute";
     [self customizeButton:self.buttonDateDeparture
            withIdentifier:nil
                  setImage:@"calendar"
-                 setTitle:@"Дата отправления"];
+                 setTitle:DateDepartureTitle];
     // обводка и радиус скругления кнопки
     self.buttonDateDeparture.layer.cornerRadius = CornerRadius;
     self.buttonDateDeparture.layer.borderColor = WhiteColor.CGColor;
@@ -89,7 +106,7 @@ static NSString *const ShowRoute            = @"showRoute";
     // шрифт и текст кнопки
     [self.buttonFindTickets setTitleColor:MintColor forState:UIControlStateNormal];
     [self.buttonFindTickets setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [self.buttonFindTickets setTitle:@"Найти билеты" forState:UIControlStateNormal];
+    [self.buttonFindTickets setTitle:FindTicketsTitle forState:UIControlStateNormal];
     [self.buttonFindTickets.titleLabel setFont:[UIFont appFontWithSize:17.f]];
 }
 
@@ -130,10 +147,8 @@ static NSString *const ShowRoute            = @"showRoute";
         RoutesController *controller = (RoutesController *)segue.destinationViewController;
         controller.navigationItemTitle = @"Билеты";
         controller.stationFrom = self.stationFrom;
-        controller.stationTo = self.stationTo;        
+        controller.stationTo = self.stationTo;
         controller.startDate = [NSString stringForRequest:self.startDate];
-        //@"2015-08-01";//[NSString stringFromDate:[NSDate getDate:[NSDate date] daysAhead:5]];
-        //self.startDate; // нужно изменить формат даты для запроса
     }
 }
 
@@ -145,9 +160,11 @@ static NSString *const ShowRoute            = @"showRoute";
     if ([self.direction isEqual:@"from"]) {
         [self buttonFromTitle:name];
         self.stationFrom = code;
+        self.fromStationSelected = YES;
     } else {
         [self buttonToTitle:name];
         self.stationTo = code;
+        self.toStationSelected = YES;
     }
 }
 
@@ -158,6 +175,55 @@ static NSString *const ShowRoute            = @"showRoute";
 {
     [self buttonDateTitle:[NSString stringForDepartureDateButton:date]];
     self.startDate = date;
+    self.startDateSelected = YES;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)reroutingAction:(UIButton *)sender
+{
+    NSString *fromTitle = self.buttonFromStation.titleLabel.text;
+    NSString *fromCode  = self.stationFrom;
+    
+    NSString *toTitle   = self.buttonToStation.titleLabel.text;
+    NSString *toCode    = self.stationTo;
+    
+    if (!self.stationFrom && self.stationTo)
+    {
+        self.stationFrom = toCode;
+        [self.buttonFromStation setTitle:toTitle forState:UIControlStateNormal];
+        self.fromStationSelected = YES;
+        
+        [self.buttonToStation setTitle:ToStationTitle forState:UIControlStateNormal];
+        self.stationTo = nil;
+        self.toStationSelected = NO;
+        
+        return;
+    }
+    
+    if (!self.stationTo && self.stationFrom)
+    {
+        self.stationTo = fromCode;
+        [self.buttonToStation setTitle:fromTitle forState:UIControlStateNormal];
+        self.toStationSelected = YES;
+        
+        [self.buttonFromStation setTitle:FromStationTitle forState:UIControlStateNormal];
+        self.stationFrom = nil;
+        self.fromStationSelected = NO;
+        
+        return;
+    }
+    
+    if (self.stationFrom && self.stationTo)
+    {
+        self.stationFrom = toCode;
+        self.stationTo = fromCode;
+        
+        [self.buttonFromStation setTitle:toTitle forState:UIControlStateNormal];
+        [self.buttonToStation setTitle:fromTitle forState:UIControlStateNormal];
+        
+        return;
+    }
 }
 
 #pragma mark - Private methods

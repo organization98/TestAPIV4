@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2C0CC6AF1B52CDBE00A06E1B /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */; };
+		2C75C8121B5551CE00824E14 /* NSDictionary+DictionaryFromJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C75C8111B5551CD00824E14 /* NSDictionary+DictionaryFromJSON.m */; };
+		2C75C8161B5552E800824E14 /* NSString+AppDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C75C8151B5552E800824E14 /* NSString+AppDateManager.m */; };
 		2CB73DE61B54EB8A004B01B7 /* all_stations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB73DE41B54EB8A004B01B7 /* all_stations.plist */; };
 		2CB73DE71B54EB8A004B01B7 /* wagon_types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB73DE51B54EB8A004B01B7 /* wagon_types.plist */; };
 		2CB73DEA1B54EC79004B01B7 /* NSDictionary+WagonTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB73DE91B54EC79004B01B7 /* NSDictionary+WagonTypes.m */; };
 		2CB73DF21B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB73DF11B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat.m */; };
-		2CB73DF51B550883004B01B7 /* NSString+AppDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB73DF41B550883004B01B7 /* NSString+AppDateManager.m */; };
 		2CD667BD1B542E2600C945C1 /* NSDate+AddDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */; };
 		2CDA00031B526AE2003E2D27 /* ChoiseStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00021B526AE2003E2D27 /* ChoiseStationController.m */; };
 		2CDA00071B526AF6003E2D27 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA00061B526AF6003E2D27 /* DateDepartureController.m */; };
@@ -102,14 +103,16 @@
 /* Begin PBXFileReference section */
 		2C0CC6AD1B52CDBE00A06E1B /* UIFont+AppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AppFont.h"; sourceTree = "<group>"; };
 		2C0CC6AE1B52CDBE00A06E1B /* UIFont+AppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AppFont.m"; sourceTree = "<group>"; };
+		2C75C8101B5551CD00824E14 /* NSDictionary+DictionaryFromJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DictionaryFromJSON.h"; sourceTree = "<group>"; };
+		2C75C8111B5551CD00824E14 /* NSDictionary+DictionaryFromJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DictionaryFromJSON.m"; sourceTree = "<group>"; };
+		2C75C8141B5552E800824E14 /* NSString+AppDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AppDateManager.h"; sourceTree = "<group>"; };
+		2C75C8151B5552E800824E14 /* NSString+AppDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AppDateManager.m"; sourceTree = "<group>"; };
 		2CB73DE41B54EB8A004B01B7 /* all_stations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = all_stations.plist; sourceTree = "<group>"; };
 		2CB73DE51B54EB8A004B01B7 /* wagon_types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wagon_types.plist; sourceTree = "<group>"; };
 		2CB73DE81B54EC79004B01B7 /* NSDictionary+WagonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+WagonTypes.h"; path = "NSDictionary+WagonTypes/NSDictionary+WagonTypes.h"; sourceTree = "<group>"; };
 		2CB73DE91B54EC79004B01B7 /* NSDictionary+WagonTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+WagonTypes.m"; path = "NSDictionary+WagonTypes/NSDictionary+WagonTypes.m"; sourceTree = "<group>"; };
 		2CB73DF01B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SetDateFormat.h"; sourceTree = "<group>"; };
 		2CB73DF11B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SetDateFormat.m"; sourceTree = "<group>"; };
-		2CB73DF31B550883004B01B7 /* NSString+AppDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AppDateManager.h"; sourceTree = "<group>"; };
-		2CB73DF41B550883004B01B7 /* NSString+AppDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AppDateManager.m"; sourceTree = "<group>"; };
 		2CD667BB1B542E2600C945C1 /* NSDate+AddDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+AddDay.h"; path = "NSDate+AddDay/NSDate+AddDay.h"; sourceTree = "<group>"; };
 		2CD667BC1B542E2600C945C1 /* NSDate+AddDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+AddDay.m"; path = "NSDate+AddDay/NSDate+AddDay.m"; sourceTree = "<group>"; };
 		2CDA00011B526AE2003E2D27 /* ChoiseStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiseStationController.h; sourceTree = "<group>"; };
@@ -270,6 +273,24 @@
 			path = "UIFont+AppFont";
 			sourceTree = "<group>";
 		};
+		2C75C80F1B5551CD00824E14 /* NSDictionary+DictionaryFromJSON */ = {
+			isa = PBXGroup;
+			children = (
+				2C75C8101B5551CD00824E14 /* NSDictionary+DictionaryFromJSON.h */,
+				2C75C8111B5551CD00824E14 /* NSDictionary+DictionaryFromJSON.m */,
+			);
+			path = "NSDictionary+DictionaryFromJSON";
+			sourceTree = "<group>";
+		};
+		2C75C8131B5552E800824E14 /* NSString+AppDateManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C75C8141B5552E800824E14 /* NSString+AppDateManager.h */,
+				2C75C8151B5552E800824E14 /* NSString+AppDateManager.m */,
+			);
+			path = "NSString+AppDateManager";
+			sourceTree = "<group>";
+		};
 		2CB73DE31B54EB8A004B01B7 /* PropertyList */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,15 +317,6 @@
 				2CB73DF11B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat.m */,
 			);
 			path = "NSDateFormatter+SetDateFormat";
-			sourceTree = "<group>";
-		};
-		2CB73DF61B5508B0004B01B7 /* NSString+AppDateManager */ = {
-			isa = PBXGroup;
-			children = (
-				2CB73DF31B550883004B01B7 /* NSString+AppDateManager.h */,
-				2CB73DF41B550883004B01B7 /* NSString+AppDateManager.m */,
-			);
-			name = "NSString+AppDateManager";
 			sourceTree = "<group>";
 		};
 		2CD667BE1B543E1200C945C1 /* NSDate+AddDay */ = {
@@ -640,6 +652,8 @@
 		321F7DCE1AE27324005DAEFE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				2C75C8131B5552E800824E14 /* NSString+AppDateManager */,
+				2C75C80F1B5551CD00824E14 /* NSDictionary+DictionaryFromJSON */,
 				2CB73DEF1B54FDEF004B01B7 /* NSDateFormatter+SetDateFormat */,
 				2C0CC6AC1B52CDBE00A06E1B /* UIFont+AppFont */,
 				2CDA00301B526BF7003E2D27 /* UIImage+ImageWithColor */,
@@ -649,7 +663,6 @@
 				2CDA001C1B526BD6003E2D27 /* NSArray+Stations */,
 				2CD667BE1B543E1200C945C1 /* NSDate+AddDay */,
 				2CB73DEB1B54EC83004B01B7 /* NSDictionary+WagonTypes */,
-				2CB73DF61B5508B0004B01B7 /* NSString+AppDateManager */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -923,6 +936,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C75C8121B5551CE00824E14 /* NSDictionary+DictionaryFromJSON.m in Sources */,
 				2CDA00331B526BF7003E2D27 /* UIImage+ImageWithColor.m in Sources */,
 				321F7DC91AE272BB005DAEFE /* UIButton+AFNetworking.m in Sources */,
 				3202F4EC1AE52376006563FD /* AFSecurityPolicy.m in Sources */,
@@ -957,8 +971,8 @@
 				321F7DCA1AE272BB005DAEFE /* UIImageView+AFNetworking.m in Sources */,
 				3202F4E91AE52376006563FD /* AFHTTPRequestOperationManager.m in Sources */,
 				2CDA00171B526B4B003E2D27 /* MyTicketsController.m in Sources */,
+				2C75C8161B5552E800824E14 /* NSString+AppDateManager.m in Sources */,
 				321F7DCD1AE272BB005DAEFE /* UIWebView+AFNetworking.m in Sources */,
-				2CB73DF51B550883004B01B7 /* NSString+AppDateManager.m in Sources */,
 				2CDA00371B526C2E003E2D27 /* PricesManager.m in Sources */,
 				2CDA00231B526BDD003E2D27 /* NSString+ContainsStrModernizer.m in Sources */,
 				3202F4ED1AE52376006563FD /* AFURLConnectionOperation.m in Sources */,

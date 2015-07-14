@@ -17,7 +17,7 @@ typedef void (^NetworkBlock)(BOOL succes, id data, NSError *error);
 
 + (SessionManager *)sharedManager;
 
--(void)open:(NetworkBlock)block;
+- (void)open:(NetworkBlock)block;
 
 // Get trains
 - (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block;

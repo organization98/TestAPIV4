@@ -94,13 +94,6 @@
     }];
 }
 
-// перенести в категорию
-- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error
-{
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
-    return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-}
-
 - (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block
 {
     NSString *requestURL = [NSString stringWithFormat:@"%@/prices?train=%@&session=%@", domain, train, session];
