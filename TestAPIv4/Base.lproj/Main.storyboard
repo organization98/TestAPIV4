@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-yb-k1z" userLabel="change">
-                                        <rect key="frame" x="218" y="27" width="46" height="46"/>
+                                        <rect key="frame" x="198" y="27" width="46" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="7no-D4-29f"/>
                                             <constraint firstAttribute="height" constant="46" id="Wjx-3V-mXb"/>
@@ -66,22 +66,40 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="5Jb-AN-bcG" userLabel="chevronTo">
+                                        <rect key="frame" x="244" y="50" width="36" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="lGk-Xp-xlv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Vrj-xV-6vd" userLabel="chevronFrom">
+                                        <rect key="frame" x="244" y="0.0" width="36" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="8qa-ZY-F1A"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="3ab-Q0-wl4" firstAttribute="trailing" secondItem="5Jb-AN-bcG" secondAttribute="trailing" id="6ls-IQ-T6z"/>
                                     <constraint firstAttribute="trailing" secondItem="FSB-Nj-JKx" secondAttribute="trailing" id="C1q-me-oeJ"/>
                                     <constraint firstAttribute="trailing" secondItem="np7-Ue-5YU" secondAttribute="trailing" id="Dsb-Jf-0jb"/>
                                     <constraint firstAttribute="height" constant="99" id="Iak-8O-Gyl"/>
                                     <constraint firstItem="FSB-Nj-JKx" firstAttribute="leading" secondItem="r97-1d-rtS" secondAttribute="leading" id="Kco-B5-zUg"/>
                                     <constraint firstItem="3ab-Q0-wl4" firstAttribute="leading" secondItem="r97-1d-rtS" secondAttribute="leading" id="R7I-B6-ufD"/>
                                     <constraint firstAttribute="centerY" secondItem="CrG-yb-k1z" secondAttribute="centerY" id="T7H-cl-WyJ"/>
+                                    <constraint firstItem="Vrj-xV-6vd" firstAttribute="trailing" secondItem="FSB-Nj-JKx" secondAttribute="trailing" id="YFy-7Z-73g"/>
                                     <constraint firstAttribute="trailing" secondItem="3ab-Q0-wl4" secondAttribute="trailing" id="aOi-Ln-mL3"/>
                                     <constraint firstItem="3ab-Q0-wl4" firstAttribute="top" secondItem="np7-Ue-5YU" secondAttribute="bottom" id="cXU-Ki-AiK"/>
                                     <constraint firstItem="FSB-Nj-JKx" firstAttribute="top" secondItem="r97-1d-rtS" secondAttribute="top" id="jHG-on-d1A"/>
-                                    <constraint firstAttribute="trailing" secondItem="CrG-yb-k1z" secondAttribute="trailing" constant="16" id="kE9-8s-gDn"/>
+                                    <constraint firstAttribute="trailing" secondItem="CrG-yb-k1z" secondAttribute="trailing" constant="36" id="kE9-8s-gDn"/>
+                                    <constraint firstItem="Vrj-xV-6vd" firstAttribute="top" secondItem="FSB-Nj-JKx" secondAttribute="top" id="p4S-as-Mx2"/>
                                     <constraint firstItem="np7-Ue-5YU" firstAttribute="leading" secondItem="r97-1d-rtS" secondAttribute="leading" id="pNW-r6-YZM"/>
+                                    <constraint firstItem="3ab-Q0-wl4" firstAttribute="height" secondItem="5Jb-AN-bcG" secondAttribute="height" id="sV7-Kz-1AD"/>
+                                    <constraint firstItem="3ab-Q0-wl4" firstAttribute="bottom" secondItem="5Jb-AN-bcG" secondAttribute="bottom" id="tUZ-Bg-qyQ"/>
                                     <constraint firstAttribute="bottom" secondItem="3ab-Q0-wl4" secondAttribute="bottom" id="xql-xi-zll"/>
                                     <constraint firstItem="np7-Ue-5YU" firstAttribute="top" secondItem="FSB-Nj-JKx" secondAttribute="bottom" id="ygf-cK-EsW"/>
+                                    <constraint firstItem="Vrj-xV-6vd" firstAttribute="height" secondItem="FSB-Nj-JKx" secondAttribute="height" id="zKF-Tn-9ox"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrU-An-xvL">
@@ -460,6 +478,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow" width="8" height="12"/>
         <image name="changeArrows" width="26" height="32"/>
         <image name="logo" width="249" height="85"/>
         <image name="more" width="35" height="10"/>

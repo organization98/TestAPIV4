@@ -28,7 +28,7 @@
 #define SilverSandColor [UIColor colorWithHexString:@"#C2C2C2"]     // light gray
 
 // start controller UI
-static float const CornerRadius = 5.f;
+static float const CornerRadius = 4.f;
 static float const BorderWidth = 1.f;
 
 // stationsArray keys
