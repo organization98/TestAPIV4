@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *activityView;
 @property (strong, nonatomic)  UILabel *labelCost;
+//@property (weak, nonatomic) IBOutlet UILabel *labelCost;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelRouteTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelNumber;

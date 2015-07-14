@@ -30,7 +30,8 @@
 {
     if ([[dict objectForKey:self.wagonType] objectForKey:@"cost"]) {
         self.activityView.hidden = YES;
-        self.labelCost = [[UILabel alloc] initWithFrame:CGRectMake(20, 171, 60, 21)];
+        self.labelCost = [[UILabel alloc] initWithFrame:CGRectMake(14.f, 157.f, 78.f, 30.f)];
+        self.labelCost.font = [UIFont appFontWithSize:17.f];
         self.labelCost.text = [[dict objectForKey:self.wagonType] objectForKey:@"cost"];
         [self addSubview:self.labelCost];
     }

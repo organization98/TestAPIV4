@@ -36,14 +36,16 @@
     
     [self addRightBarButtonItems];
     
+    self.tableView.backgroundColor = DesertStormColor;
+    
     CALayer *border = [CALayer layer];
     border.borderColor = MintColor.CGColor;
     border.borderWidth = 1.f;
     CALayer *layer = self.navigationController.navigationBar.layer;
     border.frame = CGRectMake(0.f, layer.bounds.size.height, layer.bounds.size.width, 1.f);
     [layer addSublayer:border];
-    self.navigationItem.title = self.navigationItemTitle;
-    self.navigationController.navigationBar.topItem.title = @""; // delete back
+//    self.navigationItem.title = self.navigationItemTitle;
+    self.navigationController.navigationBar.topItem.title = self.navigationItemTitle; // delete back
     
     pricesManager = [[PricesManager alloc] init];
     
@@ -170,15 +172,11 @@
 
 - (void)addRightBarButtonItems
 {
-    UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]]];
-    [btnSearch setTarget:self];
-    [btnSearch setAction:@selector(searchAction)];
+    UIBarButtonItem *buttonSearch = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
     
-    UIBarButtonItem *btnFilter = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"filter"]]];
-    [btnFilter setTarget:self];
-    [btnFilter setAction:@selector(filterAction)];
+    UIBarButtonItem *buttonFilter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterAction)];
     
-    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnSearch, btnFilter, nil]];
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:buttonSearch, buttonFilter ,nil]];
 }
 
 - (void)searchAction
