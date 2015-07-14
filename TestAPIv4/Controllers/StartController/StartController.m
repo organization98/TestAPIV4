@@ -168,7 +168,7 @@ static NSString *const ShowRoute            = @"showRoute";
 - (void)setDepartureDate:(NSDate *)date
 {
     [self buttonDateTitle:[NSString stringForDepartureDateButton:date]];
-    self.startDate = [NSString stringWithFormat:@"%@", date];
+    self.startDate = date;
 }
 
 #pragma mark - Private methods
